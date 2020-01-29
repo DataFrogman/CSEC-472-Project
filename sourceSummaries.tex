@@ -31,22 +31,27 @@ organization=\{MIT\}
 \subsection{Main Idea}
 
 \noindent
-Enter main idea paragraph here.
+The authors detail the security methods used in Bluetooth versions 4.X, attempt to show attacks that bypass these methods, and describe ways to harden Bluetooth security against these attacks.  
 
 \subsection{Theory}
 
 \noindent
-Enter Theory paragraph here.
+Game Theory is the primary theory being tested in this article.  The authors attack various vulnerabilities in the Bluetooth protocol in order to determine methods to increase the relative security of the protocol.
+
+\subsection{Method}
+
+\noindent
+The researchers theorized and tested primary attacks against the Bluetooth security model: Active Eavesdropping and Passive Eavesdropping.  Their attacks built upon the works by Da-Zhi Sun et al., Cope et a., Das et al., and Ryan.  The assets used were a Raspberry Pi running Debian, an Ubertooth, TaoTronics TT-BH07 Bluetooth Headphones, a Logitech MX Master Mouse, and a Galazy S7 Edge.  The authors modified existing Bluetooth utilities for their attacks and wrote some scripts of their own.
 
 \subsection{Findings}
 
 \noindent
-Enter findings paragraph here
+The authors managed to exploit their theorized vulnerabilities successfully.  They found that the JustWorks authentication method used by headsets and headphones are insecure against active eavesdropping attacks with unsophisticated hardware.  The researchers also discovered that, while difficult, passive eavesdropping is still successful against hardware running Bluetooth 4.1 and recommend moving to version 4.2 or greater.  They also found that devices using LE Secure Connections or Secure Simple Pairings are secure against these specific attacks.
 
 \subsection{Future Directions}
 
 \noindent
-Enter directions paragraph here
+The future directions for Active Eavesdropping is to expand and cover more than JustWorks devices, this would include attacks against mice and keyboards.  The next steps for Passive Easedropping is to use the extrapolated information to decrypt packets for further analysis and to attack other devices like keyboards and medical implants, this can be used to gather sensitive information like passwords and health data.  They also stated that they could combine the two attack types to inject malicious packets or modify existing ones for other attacks against the devices.  Finally, they could also do research on the vulnerabilities in Bluetooth 5.0.
 
 
 \end{document}
