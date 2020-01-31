@@ -54,6 +54,43 @@ The authors managed to exploit their theorized vulnerabilities successfully.  Th
 The future directions for Active Eavesdropping is to expand and cover more than JustWorks devices, this would include attacks against mice and keyboards.  The next steps for Passive Easedropping is to use the extrapolated information to decrypt packets for further analysis and to attack other devices like keyboards and medical implants, this can be used to gather sensitive information like passwords and health data.  They also stated that they could combine the two attack types to inject malicious packets or modify existing ones for other attacks against the devices.  Finally, they could also do research on the vulnerabilities in Bluetooth 5.0.
 
 \Urlmuskip=0mu plus 1mu\relax
+
+
+\pagebreak
+
+\section{Extracting the Security Features Implemented in a Bluetooth LE Connection}
+
+
+\noindent
+
+\Urlmuskip=0mu plus 1mu\relax
+\bibentry{8622000}
+
+\subsection{Main Idea}
+
+\noindent
+The authors detail the encryption and authentication standards found in the Bluetooth Low Energy Protocol, from Bluetooth 4.0 to Bluetooth 5.0.  The researchers also look at several BLE devices to analyze their security models.
+\subsection{Theory}
+
+\noindent
+Game Theory is the primary theory being tested in this article.  The authors attack various vulnerabilities in the Bluetooth protocol in order to determine methods to increase the relative security of the protocol.
+
+\subsection{Method}
+
+\noindent
+The researchers found that many modern fitness trackers use older versions of Bluetooth low energy.  They also found that these fitness trackers often do not enable optional features that make bluetooth much more secure.  As a result, most of the encryption was trivial to decrypt.  The researchers then created an app that uses the Bluetooth sniff log functionality present in the developer section in Android to extract the security features of a bluetooth low energy device.
+
+\subsection{Findings}
+
+\noindent
+The authors managed to exploit their theorized vulnerabilities successfully.  They found that the JustWorks authentication method used by headsets and headphones are insecure against active eavesdropping attacks with unsophisticated hardware.  The researchers also discovered that, while difficult, passive eavesdropping is still successful against hardware running Bluetooth 4.1 and recommend moving to version 4.2 or greater.  They also found that devices using LE Secure Connections or Secure Simple Pairings are secure against these specific attacks.
+
+\subsection{Future Directions}
+
+\noindent
+The authors want to make their app much more usable to the average consumer.  Right now it's very oriented toward technical-minded researchers.
+
+
 \bibliography{references}
 
 \end{document}
