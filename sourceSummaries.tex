@@ -90,6 +90,39 @@ The authors managed to exploit their theorized vulnerabilities successfully.  Th
 \noindent
 The authors want to make their app much more usable to the average consumer.  Right now it's very oriented toward technical-minded researchers.
 
+\pagebreak
+
+\section{Finding Vulnerabilities in IoT Devices: Ethical Hacking of Electronic Locks}
+
+
+\noindent
+\subsection{Citation}
+\Urlmuskip=0mu plus 1mu\relax
+\bibentry{8622000}
+
+\subsection{Main Idea}
+
+\noindent
+The authors outline how to approach attacking Bluetooth locks in a scientific fashion. They use well documented attacks and threat modeling to discover vulnerabilities in a Bluetooth low energy lock.
+\subsection{Theory}
+
+\noindent
+Game theory is being utilized to test the security of the lock and see where the vulnerabilities in the lock lie. 
+
+\subsection{Method}
+
+\noindent
+A threat rating system following the DREAD model is created to accurately represent the threat of the lock. Three threat models were created: unauthorized lock access, avoidance of logging, and denial of service. A Bluetooth man in the middle attack is carried out to gather information about the lock’s Generic Attribute Profile (GATT), how connections are formed, hosted services, and other characteristics of the lock. Using the GATT, a fake lock can be created to connect to the application, and then forward all information onto the actual lock. Next, access permission edge cases are tested to see when access can be abused to bypass controls. The app was reversed to gather further insight on how the app connected to the lock. 
+
+\subsection{Findings}
+
+\noindent
+Not much was able to be done in the way of breaking into the lock. Some patterns were found in the communication scheme, but nothing to indicate how the data was being encrypted. A replay attack was launched, but this was ineffective. Fuzzing was similarly ineffective. If an attacker is granted permission to access the lock, disconnects their internet, and then their permission is revoked, the attacker can still access the lock. In the app, a possible encryption key for a database was found, but not pursued. 
+
+\subsection{Future Directions}
+
+\noindent
+The authors would like to see a more structured method developed to analyze the security of Bluetooth devices, as many of the approaches they took were very time consuming. 
 
 \bibliography{references}
 
