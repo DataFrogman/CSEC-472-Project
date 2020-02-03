@@ -126,6 +126,39 @@ Not much was able to be done in the way of breaking into the lock. Some patterns
 \noindent
 The authors would like to see a more structured method developed to analyze the security of Bluetooth devices, as many of the approaches they took were very time consuming. 
 
+\section{Security Evaluation and Exploitation of Bluetooth Low Energy Devices}
+
+\noindent
+\subsection{Citation}
+
+\Urlmuskip=0mu plus 1mu\relax
+\bibentry{rose_2017}
+
+\subsection{Main Idea}
+
+\noindent
+In his thesis, Captian Rose attemps to provide the industry with a wholistic look on the security of the low energy bluetooth protocol. He uses four different methods in an attempt to cover a wide range of conigurations and scenarios to really put this protocol to the test.
+
+\subsection{Theory}
+
+\noindent
+Game Theory is the primary theory being tested in this article.  Captain Rose proposes multiple different scenarios where the bluetooth protocol is vulnerable in order to better understand how to secure it in the future.
+
+\subsection{Method}
+
+\noindent
+Captain Rose and his supporters used multiple different methods to test the strength and security of the Bluetooth protocol. First, he used a benchmark open-source range-finding tool to determine the location of Bluetooth devices through a novel distance estimation method, increasing the state-of-the-art device location distance from 50 meters up to 1,000 meters. Second, he evaluated 17 individual Bluetooth Low Energy devices for vulnerabilities in their operating system. Thirdly, he used user behavior analytics to demonstrate how malicious actors can exploit vulnerabilities for unauthorized device access and obtain sensitive information
+
+\subsection{Findings}
+
+\noindent
+Captain Rose's research revealed that 13 out of 17 (75 percent) of the tested devices contained at least one vulnerability resulting in unauthorized access. However, he did find that countermeasures to BLE attacks already exist and most require minimum implementation and development by manufacturers. More complex mediation techniques exist for issues that are not solved by the initial mediation techniques.
+
+\subsection{Future Directions}
+
+\noindent
+Since Captain Rose's work was done on an outdated bluetooth protocol (4.1) he mentions that there is room for others or himself to do research on devices implementing the newest protocol. He also recommends research into newly release bluetooth devices such as Lockitron or Schlage. He also states that he did not do any work with the firmware of the devices he tested so there is room for others to continue his work there. Along with that, he states that no research was done on attempting to clone the devices that he was testing, so there is more work to be done there.
+
 \pagebreak
 
 \bibliography{references}
