@@ -1,15 +1,6 @@
-sudo: false
- language: generic
- matrix:
- include:
- - os: linux
- cache:
- directories:
- - "/tmp/texlive"
- - "$HOME/.texlive"
- timeout: 3600
- before_install:
- - travis_wait 45 bash ./utilities/travis_setup.sh
- - export PATH="/tmp/texlive/bin/x86_64-linux:$PATH"
- script:
- - latexmk -pdf -interaction=nonstopmode -halt-on-error sourceSummaries.tex
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
+script:
+- pdflatex -interaction=nonstopmode -halt-on-error *.tex
