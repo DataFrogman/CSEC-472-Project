@@ -2,6 +2,6 @@ language: ruby
 os: linux
 dist: trusty
 before_install:
-- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-bibtex-extra xzdec && sudo tlmgr init-usertree && sudo tlmgr install url && sudo tlmgr update --self --all --no-auto-install
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-latex-base texlive-bibtex-extra texlive-latex-extra
 script:
 - pdflatex -interaction=nonstopmode -halt-on-error *.tex
