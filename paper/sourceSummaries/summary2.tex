@@ -6,6 +6,49 @@
 \subsubsection{Group Member}
 
 \noindent
+Connor Leavesley
+
+\noindent
+\subsubsection{Citation}
+
+\Urlmuskip=0mu plus 1mu\relax
+%remove % to show citation, change the name to your entry
+
+\bibentry{sevier2019securityofble}
+
+
+\subsubsection{Main Idea}
+
+\noindent
+The authors aim to explain how Bluetooth LE protocol works and the cryptographic weaknesses in the protocol.
+
+
+\subsubsection{Theory}
+
+\noindent
+This paper is applying Game Theory. A successful cryptographic attack is a loss for the security of the protocol. 
+
+\subsubsection{Method}
+
+\noindent
+The authors first sniffed the Bluetooth traffic with a Ubertooth using the BlueZ Bluetooth driver and associated Ubertooth drivers. Using the Blueooth handshake, the authors used Crackle to crack the Temporary Key due to its restricted key space. The Temporary Key was then used to gain access to the Long Term Key (LTK). The LTK was then used to decrypt any future communication traffic in Wireshark. 
+
+\subsubsection{Findings}
+
+\noindent
+The authors found that the keyspace of the Temporary Key is very restricted, allowing for a very quick brute force attack. They also found that Bluetooth Low Energy was susceptible to a number of attacks due to the low power requirements: denial of service and replay attacks. It was also found that Ubertooth struggled to capture a complete pairing event. The authors suggest that the Ubertooth should be as close as possible to the source transceiver to mitigate this issue. 
+
+\subsubsection{Future Directions}
+
+\noindent
+Many vendors likely do not implement the Bluetooth stack correctly. These vendors may also use the same stack across multiple devices. Areas of further research should focus on individual devices from the same vendor to attempt to find vulnerabilities that affect entire product lines. 
+
+\noindent
+\subsection{Wiegand Protocol Access: A Decade of Decryption}
+
+\subsubsection{Group Member}
+
+\noindent
 Quintin Walters
 
 \noindent

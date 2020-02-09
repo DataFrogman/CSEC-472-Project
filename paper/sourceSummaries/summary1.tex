@@ -93,7 +93,7 @@ Connor Leavesley
 \subsubsection{Main Idea}
 
 \noindent
-The authors outline how to approach attacking Bluetooth locks in a scientific fashion. They use well documented attacks and threat modeling to discover vulnerabilities in a Bluetooth low energy lock.
+The authors outline how to approach attacking Bluetooth locks. They use well documented attacks to discover vulnerabilities in a Bluetooth low energy lock.
 
 \subsubsection{Theory}
 
@@ -103,12 +103,12 @@ Game theory is being utilized to test the security of the lock and see where the
 \subsubsection{Method}
 
 \noindent
-A threat rating system following the DREAD model is created to accurately represent the threat of the lock. Three threat models were created: unauthorized lock access, avoidance of logging, and denial of service. A Bluetooth man in the middle attack is carried out to gather information about the lock’s Generic Attribute Profile (GATT), how connections are formed, hosted services, and other characteristics of the lock. Using the GATT, a fake lock can be created to connect to the application, and then forward all information onto the actual lock. Next, access permission edge cases are tested to see when access can be abused to bypass controls. The app was reversed to gather further insight on how the app connected to the lock. 
+The authors create a threat rating system following the DREAD model is to accurately represent the threat of the lock being successfully attacked. They make three threat models: unauthorized lock access, avoidance of logging, and denial of service. They use a Bluetooth man in the middle attack to gather information about the lock’s Generic Attribute Profile (GATT), how the application connected to the lock, hosted services, and other characteristics of the lock. Using the GATT, an attacker could use a fake lock hosted on a Arduino board to connect to the application, and then forward all information to the actual lock. Next, the authors test access permission edge cases to see when access could be abused by an attacker to bypass controls. The authors then reversed the app to gather further insight on how the app connected to the lock.
 
 \subsubsection{Findings}
 
 \noindent
-Not much was able to be done in the way of breaking into the lock. Some patterns were found in the communication scheme, but nothing to indicate how the data was being encrypted. A replay attack was launched, but this was ineffective. Fuzzing was similarly ineffective. If an attacker is granted permission to access the lock, disconnects their internet, and then their permission is revoked, the attacker can still access the lock. In the app, a possible encryption key for a database was found, but not pursued. 
+Not much was able to be done in the way of breaking into the lock. Some patterns were found in the communication scheme, but nothing to indicate how the application was encrypting the connection. The authors lauched a replay attack, but this was ineffective. Fuzzing was similarly ineffective. If the owner of the lock granted an attacker permission to access it, disconnects their internet, and then the attacker's permission was revoked, the attacker can still access the lock. In the app, a possible encryption key for a database was found, but not pursued.
 
 \subsubsection{Future Directions}
 
