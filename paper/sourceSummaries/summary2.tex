@@ -1,6 +1,6 @@
 \section{Summary 2}
 
-\noindenlt
+\noindent
 \subsection{{A}nalyzing the {S}ecurity of {B}luetooth {L}ow {E}nergy}
 
 \subsubsection{Group Member}
@@ -13,12 +13,15 @@ Connor Leavesley
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
+
 \bibentry{sevier2019securityofble}
+
 
 \subsubsection{Main Idea}
 
 \noindent
 The authors aim to explain how Bluetooth LE protocol works and the cryptographic weaknesses in the protocol.
+
 
 \subsubsection{Theory}
 
@@ -39,6 +42,46 @@ The authors found that the keyspace of the Temporary Key is very restricted, all
 
 \noindent
 Many vendors likely do not implement the Bluetooth stack correctly. These vendors may also use the same stack across multiple devices. Areas of further research should focus on individual devices from the same vendor to attempt to find vulnerabilities that affect entire product lines. 
+
+\noindent
+\subsection{{W}iegand {P}rotocol {A}ccess: {A} {D}ecade of {D}ecryption}
+
+\subsubsection{Group Member}
+
+\noindent
+Quintin Walters
+
+\noindent
+\subsubsection{Citation}
+
+\Urlmuskip=0mu plus 1mu\relax
+%remove % to show citation, change the name to your entry
+\bibentry{chung2017wiegand}
+
+\subsubsection{Main Idea}
+
+\noindent
+Brandon Chung covers what the Wiegand Protocol is, the historic vulnerabilities and hacks, what vulnerabilities still exist, and how to protect yourself against them.  He spends a large amount of time on the historic attacks because most of them are still applicable, the protocol has not been hardened against them and as a result it is still very easy to exploit.
+
+\subsubsection{Theory}
+
+\noindent
+Chung applies Game Theory in his work, he treats the security of the Wiegand Protocol as a zero sum game in which any method of bypass is a loss for the defenders.  He highlights historic vulnerabilities of the protocol that are still in existence to reinforce this belief.
+
+\subsubsection{Method}
+
+\noindent
+The author primarily presents the findings of others, he does little original research of his own.  However, he does use an Arduino device to attack an unnamed Wiegand RFID reader.  He connects his Arduino device to the Wiegand DATA 0 and DATA 1 wires, then he uses monkeyboard's "Wiegand Protocol Library for Arduino" to verify that the inherent vulnerabilities in the protocol still exist.  Chung provides instructions and sample code for readers to attempt this on their own devices. This attack is the basis of the attacks done by Bernard Mehl (2015) and Zac Franken (2007), two attacks that Chung wrote in depth about.
+
+\subsubsection{Findings}
+
+\noindent
+Brandon Chung found that Wiegand devices are still vulnerable to decade old attacks.  These attacks have been extensively documented and Chung duplicated the early stages of them to prove that they would still work.  Using an arduino device, or similar microcontroller, an attacker can intercept and then duplicate the signals sent by a Wiegand device to the control server. This attack can capture and repeat and authorized card without needing to physically duplicate the card.
+
+\subsubsection{Future Directions}
+
+\noindent
+Chung lays out multiple methods for future implementation to secure Wiegand devices.  He recommends that the protocol be adapted to allow for encrypted keycards and the rejection of keycards that are not properly encrypted, he also recommends that the actual readers implement hardware methods to detect when the device has been tampered with and to report that tampering immediately to the controller.  Further upgrades include remote firmware detection and updates, Wiegand devices typically are not able to be updated without direct physical contact which disincentivizes updating the readers unless absolutely necessary.
 
 \Urlmuskip=0mu plus 1mu\relax
 
