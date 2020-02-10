@@ -169,4 +169,46 @@ Can you improve the implemented solution so that there is no limit on how many p
 
 \Urlmuskip=0mu plus 1mu\relax
 
+\subsection{Security Vulnerabilities of Bluetooth Low Energy Technology (BLE)}
+
+\subsubsection{Group Member}
+
+\noindent
+Jacob Ruud
+
+\noindent
+\subsubsection{Citation}
+
+\Urlmuskip=0mu plus 1mu\relax
+%remove % to show citation, change the name to your entry
+
+\bibentry{osullivan}
+
+\subsubsection{Main Idea}
+
+\noindent
+Author Harry O'Sullivan along with mentor Ming Chow attempt to analyze the security of bluetooth low energy technology. They focus specifically on how BLE devices communicate with each other and how the communication between devices could be exploited by attackers.
+
+\subsubsection{Theory}
+
+\noindent
+O'sullivan applies Game Theory in his work on BLE devices. Posing as an attacker he and attempts to simulate attack scenarios treating a compromise of sensitive information as a win.
+
+\subsubsection{Method}
+
+\noindent
+The author presents three different methods to compromise BLE as part of his research. The first method he attemps is an eavesdropping attack, during which he tries to capture information about a bluetooth host device using a sniffer. The second attack method he outlines is Man-in-the-middle, to explain which he refers to research done by lecturers at Marthandam College. The third attack scenario he describes is denial of service. During his explaination he outlines work done by researchers at University of Utah, as well as an attack technique called fuzzing.
+
+\subsubsection{Findings}
+
+\noindent
+The main findings ot this paper present the vulnerabilities of the BD ADDR field which is present in all BLE communication. O'Sullivan found that an attacker could use bluetooth fuzzing to determine the master source of a bluetooth connection and potentially forge a connection to it. Not to mention the fact that BD ADDR's are not globally unique so an attacker could try to spoof their BD ADDR until packets start flowing in.
+
+\subsubsection{Future Directions}
+
+\noindent
+The author does not include any future directions at the end of his work. Bluetooth Low Energy has been tested extensively since its inception, and I can only assume that O'Sullivan believes that there is work out there testing every corner or bluetooth low energy. I do not necessarily agree with his thoughts but that is all there is to report with this paper.
+
+\Urlmuskip=0mu plus 1mu\relax
+
 \pagebreak
