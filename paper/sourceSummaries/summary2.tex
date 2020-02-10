@@ -85,7 +85,6 @@ Chung lays out multiple methods for future implementation to secure Wiegand devi
 
 \Urlmuskip=0mu plus 1mu\relax
 
-
 \noindent
 \subsection{{S}urvey on {V}arious {D}oor {L}ock {A}ccess {C}ontrol {M}echanisms}
 
@@ -125,5 +124,49 @@ The authors find that no one current system could be considered the most secure,
 
 \noindent
 The authors suggest using the knowlege of authentication system problems in order to build a new system, taking in mind the strengths and weaknesses for each category of authentication.
+
+\subsection{{B}luetooth {L}ow {E}nergy and {S}martphones for {P}roximity-{B}ased  {A}utomatic {D}oor {L}ocks}
+
+\subsubsection{Group Member}
+
+\noindent
+Daniel Capps
+
+\noindent
+\subsubsection{Citation}
+
+\Urlmuskip=0mu plus 1mu\relax
+%remove % to show citation, change the name to your entry
+\bibentry{andersson2014bluetooth}
+
+\subsubsection{Main Idea}
+
+\noindent
+The authors attempt to evaluate Bluetooth Low Energy as a technology by focusing on its use in door locks that automatically unlock based on the proximity of a smartphone.
+
+
+\subsubsection{Theory}
+
+\noindent
+Game theory. The authors try to determine ways to use the Proximity-based Automatic Door Locks with Bluetooth Low Energy without causing any adversaries to be able to exploit the locks. 
+
+\subsubsection{Method}
+
+\noindent
+The author’s main method for testing their hypothesis had two halfs. The first half was to implement an application for iOS that would be able to unlock/lock the door lock, and the second half was to measure the Received Signal Strength Indicator (RSSI) between the phone and the door lock in order to ensure that the door would only unlock if the phone was in close enough proximity, and otherwise would be locked.
+
+\subsubsection{Findings}
+
+\noindent
+The authors gained a lot of knowledge pertaining to how suitable Bluetooth Low Energy is for automatic door locks, including what restrictions and possibilities exist on the iOS platform for developing Bluetooth Low Energy applications. The authors primarily learned that using this method they determined that they couldn’t differentiate between the two sides of the door the user was located on, that the applications effect on the battery life of the phone was negligible, the connection latency was sufficiently small for use in practice. The author's conclusion is that Bluetooth Low Energy is a suitable technology for proximity-based door locks.
+
+
+\subsubsection{Future Directions}
+
+\noindent
+Can you improve the implemented solution so that there is no limit on how many people can be in close proximity to the lock at once? Is there a better alternative to Bluetooth Low Energy in the case of Proximity-based door locks?
+
+
+\Urlmuskip=0mu plus 1mu\relax
 
 \pagebreak
