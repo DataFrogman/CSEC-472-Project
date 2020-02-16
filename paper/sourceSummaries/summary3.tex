@@ -42,6 +42,54 @@ Future Directions
 
 \Urlmuskip=0mu plus 1mu\relax
 
+\subsection{{S}mart {L}ocks: {L}essons for {S}ecuring {C}ommodity {I}nternet of  {T}hings  {D}evices}
+
+\subsubsection{Group Member}
+
+\noindent
+Daniel Capps
+
+\noindent
+\subsubsection{Citation}
+
+\Urlmuskip=0mu plus 1mu\relax
+
+\bibentry{ho2016smart}
+
+\subsubsection{Main Idea}
+
+\noindent
+The authors examine the security of smart locks and present three types of attacks against them. The authors also analyze five commercially used locks with their focus being how they fair against these attacks. The analysis the authors use revealed flaws in the design, implementation, and interaction models of existing locks can be exploited by multiple adversaries. Giving the adversaries capabilities from unauthorized passage to irrevocable control of the lock. The authors also propose several mitigation techniques for the attacks they present. The author’s goal is informing people about the security challenges in the system design and functionality from new IoT systems.  
+
+
+
+
+\subsubsection{Theory}
+
+\noindent
+Game Theory. The authors determine different types of attacks and mitigation techniques for smart locks against different types of adversaries.
+
+
+
+\subsubsection{Method}
+
+\noindent
+The authors use different tests for each attack vector using a specific environment. The three attack vectors described by the authors are State Consistency attacks, Unwanted Unlocking, and Privacy Leakage. The State Consistency attacks exploit the trust between the user’s mobile application and the lock. Specifically where the lock needs the user to send data to the server for them and won’t update their privileges if they’re offline. This allows revoked users to gain access to a lock even if the owner changed their permissions on the server. Unwanted Unlocking deals with certain conditions being met for unlocking the lock, but said conditions having edge cases where adversaries could unlock the door. An example of this is a Side-of-the-Door attack where an authorized user gets too close to the door from the inside and the lock either automatically unlocks or simply requires a touch from the adversary right outside the door in order to gain access. Privacy Leakage has to do with the server being able to see logs from houses unencrypted on the server side. Allowing any adversary with access to the server to see the logs of different people using those smart locks. The authors also tested different methods for mitigating these problems.
+
+
+
+\subsubsection{Findings}
+
+\noindent
+The authors implemented mitigation techniques for the attack vectors they found against smart locks. For State Consistency attacks, the authors used an access control list stored on the lock that would request updates and send log data each time an honest user was nearby. They also had the smart lock deny people access if they couldn’t connect to the server and they were determined to be untrustworthy. For Privacy Leakage, the authors use a key generated on the lock that’s sent to the user over BLE and upload the encrypted logs to the website. Allowing a user to see their logs over the internet without their logs being compromised. For Unwanted Unlocking, the authors used Vibrato. Which has the lock send a signal through a Body-Area Network(BAN) into the user’s phone and then has the phone send an unlock message through BLE. Using a detection threshold of 2 x 10 to the 10th Hz they have the lock opening 100 percent of times it’s touched and 0 percent of the time it’s not touched. However, because the technology for BAN isn’t in modern phones this solution wouldn’t be able to be implemented for a while.
+
+\subsubsection{Future Directions}
+
+\noindent
+How could we more accurately triangulate a person's position to avoid Unwanted Unlocking without having to use BAN? Is it possible to make a smart lock immune to traditional lockpicking?
+
+\Urlmuskip=0mu plus 1mu\relax
+
 
 \noindent
 \subsection{Testing Vulnerabilities in Bluetooth Low Energy}
@@ -83,7 +131,5 @@ The authors found that classical Bluetooth is still more secure for the time bei
 The authors next want to expand their device reach.  The keyboard was picked because of it's ease of re-pairing the device.  However, this same technique will work for other Bluetooth Low Energy devices, such as a smartwatch.  The authors want to try different smartwatches and a few fitness trackers and see if the Ubertooth and Crackle can collectively decrypt the traffic.
 
 \Urlmuskip=0mu plus 1mu\relax
-
-
 
 \pagebreak
