@@ -61,22 +61,15 @@ Daniel Capps
 \noindent
 The authors examine the security of smart locks and present three types of attacks against them. The authors also analyze five commercially used locks with their focus being how they fair against these attacks. The analysis the authors use revealed flaws in the design, implementation, and interaction models of existing locks can be exploited by multiple adversaries. Giving the adversaries capabilities from unauthorized passage to irrevocable control of the lock. The authors also propose several mitigation techniques for the attacks they present. The author’s goal is informing people about the security challenges in the system design and functionality from new IoT systems.  
 
-
-
-
 \subsubsection{Theory}
 
 \noindent
 Game Theory. The authors determine different types of attacks and mitigation techniques for smart locks against different types of adversaries.
 
-
-
 \subsubsection{Method}
 
 \noindent
 The authors use different tests for each attack vector using a specific environment. The three attack vectors described by the authors are State Consistency attacks, Unwanted Unlocking, and Privacy Leakage. The State Consistency attacks exploit the trust between the user’s mobile application and the lock. Specifically where the lock needs the user to send data to the server for them and won’t update their privileges if they’re offline. This allows revoked users to gain access to a lock even if the owner changed their permissions on the server. Unwanted Unlocking deals with certain conditions being met for unlocking the lock, but said conditions having edge cases where adversaries could unlock the door. An example of this is a Side-of-the-Door attack where an authorized user gets too close to the door from the inside and the lock either automatically unlocks or simply requires a touch from the adversary right outside the door in order to gain access. Privacy Leakage has to do with the server being able to see logs from houses unencrypted on the server side. Allowing any adversary with access to the server to see the logs of different people using those smart locks. The authors also tested different methods for mitigating these problems.
-
-
 
 \subsubsection{Findings}
 
@@ -89,7 +82,6 @@ The authors implemented mitigation techniques for the attack vectors they found 
 How could we more accurately triangulate a person's position to avoid Unwanted Unlocking without having to use BAN? Is it possible to make a smart lock immune to traditional lockpicking?
 
 \Urlmuskip=0mu plus 1mu\relax
-
 
 \noindent
 \subsection{Testing Vulnerabilities in Bluetooth Low Energy}
