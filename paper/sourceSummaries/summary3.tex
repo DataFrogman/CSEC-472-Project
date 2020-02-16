@@ -1,7 +1,7 @@
 \section{Summary 3}
 
 \noindent
-\subsection{Breaking Access Controls with BLEKey}
+\subsection{{B}reaking {A}ccess {C}ontrols with {BLEK}ey}
 
 \subsubsection{Group Member}
 
@@ -18,27 +18,27 @@ Quintin Walters
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+Mark Baseggio and Eric Evenchick outline the simplicity of the Wiegand protocol.  They then explain the BLEKey, how they built it, and how it is used to attack Wiegand capable card readers.  The authors indicate that similar research has been done in the past but they wished to improve upon it by implementing Bluetooth communications in order to reduce the risk of discovery by retrieval.
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+The theory applied by the authors is game theory, they demonstrate a vulnerability of the Wiegand protocol and then go about demonstrating a method to exploit it.
 
 \subsubsection{Method}
 
 \noindent
-Method
+Baseggio and Evenchick custom developed the hardware for the BLEKey using KiCad and a pre-built Bluetooth Low-Energy module.  They then programmed it with the ARM GCC compiler and the Nordic Firmware updaters.  The authors then attach the BLEKey to a Wiegand interface using hte insulation displacement connector on the tool.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The authors found that they could effectively intercept and store the card data as it is transmitted along the wires.  They also found that they could remotely connect to the BLEKey to pull the card data from it, do a replay attack with a stored card, or play a custom card number.  This can be used with great affect by penetration testers with even lower risk of discovery than prior devices.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+Future research and development of the BLEKey can involve the addition of cellular radios, this can allow testers to use the device with even less risk of discovery along with adding the possibility of storing the card data off-site instead of on the BLEKey itself.  Another path of future development can involve a method to tie the BLEKey into the card reader power supply so that it does not have to rely on a battery.  This would allow testers to use it on longer term engagements without needing to risk discovery by replacing the battery.
 
 \Urlmuskip=0mu plus 1mu\relax
 
@@ -61,22 +61,15 @@ Daniel Capps
 \noindent
 The authors examine the security of smart locks and present three types of attacks against them. The authors also analyze five commercially used locks with their focus being how they fair against these attacks. The analysis the authors use revealed flaws in the design, implementation, and interaction models of existing locks can be exploited by multiple adversaries. Giving the adversaries capabilities from unauthorized passage to irrevocable control of the lock. The authors also propose several mitigation techniques for the attacks they present. The author’s goal is informing people about the security challenges in the system design and functionality from new IoT systems.  
 
-
-
-
 \subsubsection{Theory}
 
 \noindent
 Game Theory. The authors determine different types of attacks and mitigation techniques for smart locks against different types of adversaries.
 
-
-
 \subsubsection{Method}
 
 \noindent
 The authors use different tests for each attack vector using a specific environment. The three attack vectors described by the authors are State Consistency attacks, Unwanted Unlocking, and Privacy Leakage. The State Consistency attacks exploit the trust between the user’s mobile application and the lock. Specifically where the lock needs the user to send data to the server for them and won’t update their privileges if they’re offline. This allows revoked users to gain access to a lock even if the owner changed their permissions on the server. Unwanted Unlocking deals with certain conditions being met for unlocking the lock, but said conditions having edge cases where adversaries could unlock the door. An example of this is a Side-of-the-Door attack where an authorized user gets too close to the door from the inside and the lock either automatically unlocks or simply requires a touch from the adversary right outside the door in order to gain access. Privacy Leakage has to do with the server being able to see logs from houses unencrypted on the server side. Allowing any adversary with access to the server to see the logs of different people using those smart locks. The authors also tested different methods for mitigating these problems.
-
-
 
 \subsubsection{Findings}
 
@@ -89,7 +82,6 @@ The authors implemented mitigation techniques for the attack vectors they found 
 How could we more accurately triangulate a person's position to avoid Unwanted Unlocking without having to use BAN? Is it possible to make a smart lock immune to traditional lockpicking?
 
 \Urlmuskip=0mu plus 1mu\relax
-
 
 \noindent
 \subsection{Testing Vulnerabilities in Bluetooth Low Energy}
