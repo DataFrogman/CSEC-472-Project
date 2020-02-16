@@ -90,4 +90,46 @@ How could we more accurately triangulate a person's position to avoid Unwanted U
 
 \Urlmuskip=0mu plus 1mu\relax
 
+
+\noindent
+\subsection{Testing Vulnerabilities in Bluetooth Low Energy}
+
+\subsubsection{Group Member}
+
+\noindent
+Joshua Niemann
+\noindent
+\subsubsection{Citation}
+
+\Urlmuskip=0mu plus 1mu\relax
+%remove % to show citation, change the name to your entry
+\bibentry{10.1145/3190645.3190693}
+
+\subsubsection{Main Idea}
+
+\noindent
+The authors analyze common weaknesses in Bluetooth connections, and use open-source tools to attack Bluetooth Low Energy keyboards.
+
+\subsubsection{Theory}
+
+\noindent
+Game Theory.  The authors directly attack the Bluetooth Low Energy protocol to gain the ability to read decrypted bluetooth packets from an attacker's perspective.
+
+\subsubsection{Method}
+
+\noindent
+The authors utilize a Bluetooth Low Energy keyboard in addition to a Ubertooth One and the CrackLE tool to decrypt packets from the keyboard.  The authors captured the pairing sequence between the computer or phone and the keyboard using an ubertooth one.
+
+\subsubsection{Findings}
+
+\noindent
+The authors found that classical Bluetooth is still more secure for the time being.  They also found that Bluetooth Low Energy is very possible to break, albeit very finnicky to get to work at times.  Capturing a pairing sequence requires the Ubertooth to be on the right channel at the right time, which can be a challenge given Bluetooth Low Energy has multiple pairing channels, and an Ubertooth can only scan one at a time.
+
+\subsubsection{Future Directions}
+
+\noindent
+The authors next want to expand their device reach.  The keyboard was picked because of it's ease of re-pairing the device.  However, this same technique will work for other Bluetooth Low Energy devices, such as a smartwatch.  The authors want to try different smartwatches and a few fitness trackers and see if the Ubertooth and Crackle can collectively decrypt the traffic.
+
+\Urlmuskip=0mu plus 1mu\relax
+
 \pagebreak
