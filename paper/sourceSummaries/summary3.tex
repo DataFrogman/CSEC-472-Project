@@ -1,7 +1,7 @@
 \section{Summary 3}
 
 \noindent
-\subsection{Breaking Access Controls with BLEKey}
+\subsection{{B}reaking {A}ccess {C}ontrols with {BLEK}ey}
 
 \subsubsection{Group Member}
 
@@ -18,27 +18,27 @@ Quintin Walters
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+Mark Baseggio and Eric Evenchick outline the simplicity of the Wiegand protocol.  They then explain the BLEKey, how they built it, and how it is used to attack Wiegand capable card readers.  The authors indicate that similar research has been done in the past but they wished to improve upon it by implementing Bluetooth communications in order to reduce the risk of discovery by retrieval.
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+The theory applied by the authors is game theory, they demonstrate a vulnerability of the Wiegand protocol and then go about demonstrating a method to exploit it.
 
 \subsubsection{Method}
 
 \noindent
-Method
+Baseggio and Evenchick custom developed the hardware for the BLEKey using KiCad and a pre-built Bluetooth Low-Energy module.  They then programmed it with the ARM GCC compiler and the Nordic Firmware updaters.  The authors then attach the BLEKey to a Wiegand interface using hte insulation displacement connector on the tool.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The authors found that they could effectively intercept and store the card data as it is transmitted along the wires.  They also found that they could remotely connect to the BLEKey to pull the card data from it, do a replay attack with a stored card, or play a custom card number.  This can be used with great affect by penetration testers with even lower risk of discovery than prior devices.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+Future research and development of the BLEKey can involve the addition of cellular radios, this can allow testers to use the device with even less risk of discovery along with adding the possibility of storing the card data off-site instead of on the BLEKey itself.  Another path of future development can involve a method to tie the BLEKey into the card reader power supply so that it does not have to rely on a battery.  This would allow testers to use it on longer term engagements without needing to risk discovery by replacing the battery.
 
 \Urlmuskip=0mu plus 1mu\relax
 
