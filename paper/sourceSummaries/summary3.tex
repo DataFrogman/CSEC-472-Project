@@ -124,17 +124,56 @@ The authors next want to expand their device reach.  The keyboard was picked bec
 
 \Urlmuskip=0mu plus 1mu\relax
 
+\noindent
+\subsection{{GATT}acking {B}luetooth {S}mart {D}evices}
+
+\subsubsection{Group Member}
+
+\noindent
+Connor Leavesley
+
+\noindent
+\subsubsection{Citation}
+
+\Urlmuskip=0mu plus 1mu\relax
+%remove % to show citation, change the name to your entry
+\bibentry{GattackingJasek}
+
+\subsubsection{Main Idea}
+The author summarized possible attacks against Bluetooth Low Energy (BLE) using the Generic Attribute Profile (GATT). The security features of BLE are also covered in detail. 
+\noindent
+
+
+\subsubsection{Theory}
+This is Game Theory. The author abused the GATT to intercept, decrypt, and inject commands in BLE communication.
+\noindent
+
+
+\subsubsection{Method}
+The author started with a high overview of what BLE is, how it advertises and pairs devices, and how attackers use GATT to transfer characteristics data. The specific BLE versions in question are 4.0 and 4.2. Then he went over BLE security features: encryption, MAC randomization, and whitelisting. Then Jasek discussed possible attacks against BLE, how manufacturers have tried to mitigate these attacks, and the risk of such attacks occurring. Finally he covers a tool he developed to assist in assessing BLE devices. 
+\noindent
+
+
+\subsubsection{Findings}
+Many of the in place security features included in BLE are either not used or not implemented correctly. Instead, manufacturers use the GATT to transfer data and start secure sessions, often incorrectly. BLE advertisements are extremely susceptible to DoS and spoofing. Manufacturers use a method called "shuffling", but it is kept secret and likely not implemented correctly. Handshakes using the GATT are often not encrypted and passive interception is very profitable for attackers. Active interception is also useful due to MAC spoofing and GATT cloning. 
+\noindent
+
+
+\subsubsection{Future Directions}
+The author does not give any indication of where he believes future research should go. However, Jasek used BLE 4.0 and BLE 4.2 in this paper. Researchers should look into how security practices have changed with the adoption of BLE 5. 
+\noindent
+
+
+\Urlmuskip=0mu plus 1mu\relax
+
 \subsection{Bluetooth Low Energy Mesh Networks: A Survey}
 
 \subsubsection{Group Member}
 
 \noindent
 Jacob Ruud
-\noindent
-\subsubsection{Citation}
 
 \Urlmuskip=0mu plus 1mu\relax
-%remove % to show citation, change the name to your entry
 \bibentry{seyedgomez2017}
 
 \subsubsection{Main Idea}
@@ -164,5 +203,4 @@ The main security takaway from this paper is that bluetooth low enerygy was orig
 The authors suggested that future community work should focus on solving problems in security, multicast, and interoperability. They noted that these areas would best help deliver secure and high quality BLE mesh networks.
 
 \Urlmuskip=0mu plus 1mu\relax
-
 \pagebreak
