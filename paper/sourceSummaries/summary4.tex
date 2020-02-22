@@ -43,7 +43,7 @@ Future Directions
 \Urlmuskip=0mu plus 1mu\relax
 
 \noindent
-\subsection{Title}
+\subsection{An Active Man-in-the-Middle Attack on Bluetooth Devices}
 
 \subsubsection{Group Member}
 
@@ -55,32 +55,32 @@ Connor Leavesley
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{BluetoothMITMTal}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The author looks to outline the main issues with BLE security. He focus on a possible architecture for a man-in-the-middle attack and a case study on a MITM'd device and an associated application. 
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+The author is utilizing Game Theory. He is attacking a Bluetooth connection via a MITM. 
 
 \subsubsection{Method}
 
 \noindent
-Method
+The author uses a Dax-Hub SW-28 Smart Bracelet and its associated app PowerSensor and the subject of the MITM attack. He used Kali Linux as the attacker and installed GATTacker and BtleJuice. He connected a CSR 4.0 dongle to a VM to transmit data between the app, the bracelet, and the middleman. He then uses GATTacker to intercept the BLE advertisements and copy the GATT profile of the bracelet. The author uses the GATT to simulate the device. Tal was then able to send fake to the device. 
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The author found that it was far to easy to intercept device communications and take control. Due to the inherent insecurities of the BLE protocol, he was able to change data that the device displayed, as well as take control of mobile camera via the app. 
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+The author does not give any ideas as to future directions. The security issues with BLE are widely know, and Tal hopes to explain the security issues here and how to exploit them in a unique manner. 
 
 \Urlmuskip=0mu plus 1mu\relax
 
