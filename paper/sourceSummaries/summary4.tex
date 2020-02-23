@@ -94,7 +94,7 @@ The author does not give any ideas as to future directions. The security issues 
 \Urlmuskip=0mu plus 1mu\relax
 
 \noindent
-\subsection{Title}
+\subsection{{B}luetooth: {W}ith {L}ow {E}nergy comes {L}ow {S}ecurity}
 
 \subsubsection{Group Member}
 
@@ -106,32 +106,32 @@ Joshua Niemann
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{179196}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The author of this paper breaks almost all the security measures relating to Bluetooth Low Energy after key generation, and builds an open-source tool that allows for the exposure of the Long-Term Key from a BLE packet if provided the pairing sequence.  The author also breaks the channel hopping algorithm, allowing for passive attackers to follow Bluetooth packets on air.
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+The author directly attacks the Bluetooth Low Energy protocol and exposes weaknesses in the key generation algorithm, the channel hopping algorithm, and other flaws in the Bluetooth Low Energy protocol.  Directly attacking the protocol allows this article to resemble Game Theory.
 
 \subsubsection{Method}
 
 \noindent
-Method
+The authors work backward from the Bluetooth protocol, breaking the security measures of Low Energy.  An Ubertooth One is used as the intercept device.  Using this ubertooth, the authors figured out how to calculate the Hop Interval, the Hop Increment, the Access Address, and CRC init.  Finally, the author works on breaking the key exchange algorithm.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The author found that an attacker could both follow a Bluetooth packet through the channel hopping algorithm, which would allow any passive attacker to follow a Bluetooth Stream with readily-available hardware like an Ubertooth.  The author also found that the key exchange algorithm is extremely broken and can be reversed in under 1 second on a modern computer.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+The author outlined several next steps.  The first of which details a hypothetical attack that would allow an attacker to force key negotiation, which would use the Bluetooth Low Energy key exchange protocol, of which was already broken in this paper.  From there, an attacker could effectively decode any live Bluetooth Low Energy communication, even if not present during the initial pairing process.
 
 \Urlmuskip=0mu plus 1mu\relax
 
@@ -142,7 +142,6 @@ Future Directions
 
 \noindent
 Jacob Ruud
-
 \noindent
 \subsubsection{Citation}
 
