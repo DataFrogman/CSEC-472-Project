@@ -140,32 +140,34 @@ Jacob Ruud
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{sandaya_sumithra_devi_2012}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The authors aim to assess the security features added to bluetooth in the 4.0 security update. They specifically focus on the addition of new security association models as well as secure simple paring both in normal and low energy mode.
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+This paper covers multiple scenarios that can be attributed to the standard alice, bob, and oscar method of describing game theory. In which oscar attemps to steal sensitive information from the communication between alice and bob treating the leak of any such data as a win.
 
 \subsubsection{Method}
 
 \noindent
-Method
+The authors break down the protocol based on a framework called "A Bluetooth Threat Taxonomy" previously developed by a man by the name of John Paul Dunning. They use this framework to provide a comprehensive risk asssessment of the bluetooth 4.0 protocol and determine what likely attack vectors are. The Attack Classifications Include: Surveillance, Range Extension, Obfuscation, Fuzzer, Sniffing, Denial of Service, Malware, Unauthorized Direct Data Access, and Man In the Middle.
+
+Upon furhter reading, the authors dive deeper into the secure simple pairing function to assess its four association models: Numeric Comparison, Just Works, Out of Band, and Passkey Entry. Each one of these models is used independantly of each other depending of the IO capabilities of the two connecting devices.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The findings of this paper demonstrate the advantages of Bluetooth Low Energy over standard Bluetooth communication. The main reason behind this destinction lies in the fact that BLE does not use DHKE in it's exchange of authentication data. This means that the protocol is less likely to be compromised due to the fact that potential threat actors are able to compute the shared DH Key and therefore have less trouble bypassing the other security mechanisms in place. Therefore, Bluetooth LE is not affected by PFS, KCI, or MitM attacks.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+The authors vaugely recommend at the end of their paper that "version 4.0 undergo a continual security analysis process by people involved." They suggest the possibility of integrated security to help "protect data privacy and to prevent misuse of data."
 
 \Urlmuskip=0mu plus 1mu\relax
 
