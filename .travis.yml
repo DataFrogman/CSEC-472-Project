@@ -13,6 +13,31 @@ addons:
       - texlive-latex-extra
       - texlive-fonts-recommended
       - texlive-publishers
+      - libcups2 
+      - libcupsfilters1 
+      - libcupsimage2 
+      - libgs9 
+      - libgs9-common 
+      - libharfbuzz-icu0
+      - libijs-0.35 
+      - libjbig2dec0 
+      - libkpathsea6 
+      - libpaper-utils 
+      - libpaper1 
+      - libpoppler58
+      - libpotrace0 
+      - libptexenc1 
+      - libsynctex1 
+      - libtexlua52 
+      - libtexluajit2 
+      - libzzip-0-13
+      - poppler-data 
+      - preview-latex-style 
+      - t1utils tex-common 
+      - texlive-base
+      - texlive-binaries 
+      - texlive-latex-recommended 
+      - texlive-pictures
 
 script:
 - cd ./paper/sourceSummaries
