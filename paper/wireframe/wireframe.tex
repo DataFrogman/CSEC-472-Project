@@ -1,36 +1,169 @@
-\documentclass[letterpaper,12pt]{article}
-\usepackage{natbib}
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage[spanish,english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
 \usepackage{bibentry}
 \usepackage[hyphens]{url}
 \usepackage[numbib]{tocbibind}
-\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black
-}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\setlength{\marginparwidth}{2cm}
+
 \include{references.bib}
 
-\bibliographystyle{plainnat}
+\title{
+		\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{CSEC-472 Authentication Paper} \\ [14pt]
+		\huge A Security Analysis of the Lenel BlueDiamond \\
+}
+
+\usepackage{authblk}
+
+\author[1]{Quintin Walters}
+\author[1]{Joshua Niemann}
+\author[1]{Connor Leavesley}
+\author[1]{Daniel Capps}
+\author[1]{Jacob Ruud}
+
+\affil[1]{\small{Computing Security, Rochester Institute of Technology}}
 
 \begin{document}
-	\nobibliography*
-	
-    \title{Wireframe}
-    \author{Quintin Walters, Joshua Niemann, Connor Leavesley,\\
-    Daniel Capps, Jacob Ruud}
-    \date{\today}
-    \maketitle
-\break
-\setcounter{tocdepth}{2}\tableofcontents
-\break
+\maketitle
+\selectlanguage{english}
+\begin{abstract}
+The abstract is in a sense the most important part of your paper, since many readers will scan an abstract first before deciding to invest effort in reading the paper.
 
+An abstract should be about 300 words long at most, and should act as a clear summary of the paper. It should state the aim and scope of the research, methods, results and conclusions, and the implications of the paper’s finding. The abstract should be broadly accessible (i.e. able to be understood by as many people as possible - even those outside the field) and communicate the importance of the work being done. 
+
+Structure the abstract as follows: background and aims, methods, results and conclusion. 
+
+Examples of some decent abstracts can be found \href{http://journal.stemfellowship.org/userimages/ContentEditor/1451371646443/AbstractExamples.pdf}{here}, with the main ideas highlighted.
+\end{abstract} 
+
+\section*{Keywords}
+Select keywords with care, because they will help users discover your paper. To determine appropriate keywords, put yourself in the position of someone who is trying to search for a paper like yours. What search terms would you use? From those terms, select a list of at least three and no more than five words. Include these words in the text of the abstract and if at all possible, in the title of the paper.
+
+\section{Introduction}
+Before we get to the actual introduction, welcome to Overleaf, as well as \LaTeX\ itself! Although \LaTeX\ certainly has its quirks, we hope that by contrasting the template you see here with the compiled document on the right side, you can get an intuitive sense of how to work with it.
+
+Another thing before the introduction; here, I'm going attach a citation to this sentence \cite{latexcompanion}. Scroll on down to the bibliography section of the \LaTeX\ code if you'd like to see the other end of the built-in references system. The numbering is all handled in-house -- you just have to assign each reference a key, and Overleaf takes care of the rest.
+
+On with the actual introduction! The introduction should provide context and background information appropriate for an academic audience. It should state a focused research question, define the variables being studied, and make clear the objective, importance, and relevance of the work.
+
+Here is where you'd introduce the context surrounding your study. What led you to the question you ended up asking? Why is it relevant? Which fields of science is your question based around? What has previous literature demonstrated?
+
+While the structure of the previous parts of the introduction can be relatively variable, you must make sure to provide a brief overview of the study itself, and the methods you used to accomplish it. Obviously, excessive detail is not necessary (that's what the next section is for). Lastly, be sure to make mention of the potential implications of your findings, but once again remember that you'll be going into more detail about that in the discussion.
+
+\textbf{For your Auth Paper:} treat your introduction as the initial pitch of an idea or a thorough examination of the significance of a research problem. After reading the introduction, your readers should not only have an understanding of what you want to do, but they should also be able to gain a sense of your passion for the topic and to be excited about the study's possible outcomes.
+
+Think about your introduction as a narrative written in \textbf{two to four paragraphs} that succinctly answers the following four questions:
+\begin{enumerate}
+   \item What is the central research problem?
+   \item What is the topic of study related to that research problem?
+    \item What methods should be used to analyze the research problem?
+   \item Why is this important research, what is its significance, and why should someone reading the paper care about the outcomes of the proposed study?
+\end{enumerate}
+
+\section{Background \& Significance}
+This is where you explain the context of your paper and describe in detail why it's important. It can be melded into your introduction or you can create a separate section to help with the organization and narrative flow of your paper. Approach writing this section with the thought that you can’t assume your readers will know as much about the research problem as you do. Note that this section is not an essay going over everything you have learned about the topic; instead, you must choose what is most relevant in explaining the aims of your research.
+
+To that end, while there are no prescribed rules for establishing the significance of your proposed study, you should attempt to address some or all of the following:
+
+\begin{itemize}
+   \item State the research problem and give a more detailed explanation about the purpose of the study than what you stated in the introduction. This is particularly important if the problem is complex or multifaceted.
+    \item Present the rationale of your proposed study and clearly indicate why it is worth doing; be sure to answer the "So What? question [i.e., why should anyone care].
+    \item Describe the major issues or problems to be addressed by your research. This can be in the form of questions to be addressed. Be sure to note how your proposed study builds on previous assumptions about the research problem.
+    \item Explain the methods you plan to use for conducting your research. Clearly identify the key sources you intend to use and explain how they will contribute to your analysis of the topic.
+   \item Describe the boundaries of your proposed research in order to provide a clear focus. Where appropriate, state not only what you plan to study, but what aspects of the research problem will be excluded from the study.
+   \item If necessary, provide definitions of key concepts or terms.
+\end{itemize}
+
+\section{Related Work}
+
+Connected to the background and significance of your study is a section of your paper devoted to a more deliberate review and synthesis of prior studies related to the research problem under investigation. The purpose here is to place your project within the larger whole of what is currently being explored, while demonstrating to your readers that your work is original and innovative. Think about what questions other researchers have asked, what methods they have used, and what is your understanding of their findings and, when stated, their recommendations.
+
+Since a literature review is information dense, it is crucial that this section is intelligently structured to enable a reader to grasp the key arguments underpinning your proposed study in relation to that of other researchers. A good strategy is to break the literature into "conceptual categories" [themes] rather than systematically or chronologically describing groups of materials one at a time. Note that conceptual categories generally reveal themselves after you have read most of the pertinent literature on your topic so adding new categories is an on-going process of discovery as you review more studies. How do you know you've covered the key conceptual categories underlying the research literature? Generally, you can have confidence that all of the significant conceptual categories have been identified if you start to see repetition in the conclusions or recommendations that are being made.
+
+\textbf{NOTE:} Do not shy away from challenging the conclusions made in prior research as a basis for supporting the need for your paper. Assess what you believe is missing and state how previous research has failed to adequately examine the issue that your study addresses. For more information on writing literature reviews, go to: \url{https://libguides.usc.edu/writingguide/literaturereview}.
+
+To help frame your paper's review of prior research, consider the "five C’s" of writing a literature review:
+\begin{itemize}
+    \item Cite, so as to keep the primary focus on the literature pertinent to your research problem.
+    \item Compare the various arguments, theories, methodologies, and findings expressed in the literature: what do the authors agree on? Who applies similar approaches to analyzing the research problem?
+    \item Contrast the various arguments, themes, methodologies, approaches, and controversies expressed in the literature: describe what are the major areas of disagreement, controversy, or debate among scholars?
+    \item Critique the literature: Which arguments are more persuasive, and why? Which approaches, findings, and methodologies seem most reliable, valid, or appropriate, and why? Pay attention to the verbs you use to describe what an author says/does [e.g., asserts, demonstrates, argues, etc.].
+    \item Connect the literature to your own area of research and investigation: how does your own work draw upon, depart from, synthesize, or add a new perspective to what has been said in the literature?
+\end{itemize}
+    
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=0.4\textwidth]{test.png}
+%  \caption{Notice how \LaTeX\ automatically numbers this figure.}
+%\end{figure}
+
+\section{Research Design \& Methods}
+This section must be well-written and logically organized because you are not actually doing the research, yet, your reader must have confidence that it is worth pursuing. The reader will never have a study outcome from which to evaluate whether your methodological choices were the correct ones. Thus, the objective here is to convince the reader that your overall research design and proposed methods of analysis will correctly address the problem and that the methods will provide the means to effectively interpret the potential results. Your design and methods should be unmistakably tied to the specific aims of your study.
+
+Describe the overall research design by building upon and drawing examples from your review of the literature. Consider not only methods that other researchers have used but methods of data gathering that have not been used but perhaps could be. Be specific about the methodological approaches you plan to undertake to obtain information, the techniques you would use to analyze the data, and the tests of external validity to which you commit yourself [i.e., the trustworthiness by which you can generalize from your study to other people, places, events, and/or periods of time].
+
+When describing the methods you will use, be sure to cover the following:
+\begin{itemize}
+    \item Specify the research process you will undertake and the way you will interpret the results obtained in relation to the research problem. Don't just describe what you intend to achieve from applying the methods you choose, but state how you will spend your time while applying these methods [e.g., coding text from interviews to find statements about the need to change school curriculum; running a regression to determine if there is a relationship between campaign advertising on social media sites and election outcomes in Europe].
+    \item Keep in mind that the methodology is not just a list of tasks; it is an argument as to why these tasks add up to the best way to investigate the research problem. This is an important point because the mere listing of tasks to be performed does not demonstrate that, collectively, they effectively address the research problem. Be sure you clearly explain this.
+    \item Anticipate and acknowledge any potential barriers and pitfalls in carrying out your research design and explain how you plan to address them. No method is perfect so you need to describe where you believe challenges may exist in obtaining data or accessing information. It's always better to acknowledge this than to have it brought up by your professor.
+    \end{itemize}
+\subsection{Procedures}
+\subsection{Timeline}
+\subsection{Novel Techniques}
+
+\section{Preliminary Suppositions \& Implications}
+Just because you don't have to actually conduct the study and analyze the results, doesn't mean you can skip talking about the analytical process and potential implications. The purpose of this section is to argue how and in what ways you believe your research will refine, revise, or extend existing knowledge in the subject area under investigation. Depending on the aims and objectives of your study, describe how the anticipated results will impact future scholarly research, theory, practice, forms of interventions, or policymaking. Note that such discussions may have either substantive [a potential new policy], theoretical [a potential new understanding], or methodological [a potential new way of analyzing] significance.
+ 
+When thinking about the potential implications of your study, ask the following questions:
+\begin{itemize}
+    \item What might the results mean in regards to challenging the theoretical framework and underlying assumptions that support the study?
+    \item What suggestions for subsequent research could arise from the potential outcomes of the study?
+    \item What will the results mean to practitioners in the natural settings of their workplace?
+    \item Will the results influence programs, methods, and/or forms of intervention?
+    \item How might the results contribute to the solution of social, economic, or other types of problems?
+    \item Will the results influence policy decisions?
+    \item In what way do individuals or groups benefit should your study be pursued?
+    \item What will be improved or changed as a result of the proposed research?
+    \item How will the results of the study be implemented and what innovations or transformative insights could emerge from the process of implementation?
+\end{itemize}
+
+\textbf{NOTE:} This section should not delve into idle speculation, opinion, or be formulated on the basis of unclear evidence. The purpose is to reflect upon gaps or understudied areas of the current literature and describe how your proposed research contributes to a new understanding of the research problem should the study be implemented as designed.
+
+\section{Conclusions}
+The conclusion reiterates the importance or significance of your paper and provides a brief summary of the entire study. This section should be only one or two paragraphs long, emphasizing why the research problem is worth investigating, why your research study is unique, and how it should advance existing knowledge.
+
+Someone reading this section should come away with an understanding of:
+\begin{itemize}
+    \item Why the study should be done,
+    \item The specific purpose of the study and the research questions it attempts to answer,
+    \item The decision to why the research design and methods used where chosen over other options,
+    \item The potential implications emerging from your proposed study of the research problem, and
+    \item A sense of how your study fits within the broader scholarship about the research problem.
+\end{itemize}
+
+\section{Acknowledgements}
+In the Acknowledgements section, the author(s) acknowledge or thank any persons or institutions who helped support the work in any way. In particular, this section must disclose any funding for the research completed, including the grant number (if a grant was awarded).
+
+Anyone to thank/credit for helping your team along the way? This is the place to do it.
+
+\section{Appendix}
+Appendices are optional sections that should include additional tables, figures, or other data beyond what is included in the results section. An appendix should be able to stand separately from the prinicpal article. Therefore, no references (callouts) to appendix figures or tables should be made in the principal article. If required, the appendix should have its own bibliographic reference list with citations to that list confined to the appendix. \cite{latexcompanion}
+
+\bibliographystyle{vancouver}
+\bibliography{references}
 
 \bibentry{test}
-
-\bibliography{references}
 
 \end{document}
