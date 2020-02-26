@@ -17,12 +17,12 @@ addons:
 script:
 - cd ./paper/sourceSummaries
 - pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
-- bibtex sourceSummaries.aux
+- bibtex sourceSummaries
 - pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
 - pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
 - cd ../paper
 - pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
-- bibtex paper.aux
+- bibtex paper
 - pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
 - pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
 
