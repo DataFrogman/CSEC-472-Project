@@ -32,8 +32,8 @@ deploy:
   token:
     secure: yiLU0Ds1mLOc4HYewmPIUJKu9m4LPtvAu5PNB4IT2vI7USnY8Nn+W6GUXE0lg8X+eJgUqAn+HCTXhlRyfE0YE35c/q5XZHWkAktJv6qWJik6dzHfIM/u8y+2flSfxjD+og8XGe+G4MIUdZC3owMw89/vStpgjYaaRnVWSkx1Vx55qv351oGmzqSej4PMMhBTPZlZlr4q7X7Y8xNXQ+hGfmkZY+XJjWelqJ2hA/qxJ5qdtu4BNUZXhLf8ToJtrjCossUXhFefRioEKfnM37t2Kyw9kRaejv7GmRmGfrs4qx9aOSITEh+e0OctSdecd9ngnQRmNDpB+Gd2rfOQkj7y7TkOo/4VqUQfm9HIiOcRaVBKBL0UYKNtgNP6dNtuFI77vUUyiv9r8md/vQgiLE9nVehcIUVkjIOYTMMiPwvMPRBZsovkLmsHLkG6sapuLVZNbi5NRPX3lig4OjKNJeOIcRX13AfbDKPQyaVw12fcpJj6iBC0eHMeS9qKEyhADSnO1v+oz0HDMV4OOMMOtnBzynu6RCMgs/mlF6fM9UbdBLudQhtb/6ry/ykog9zuho3kAd8T6SYzlOm+1JUuJvUutxsPyiKN9mGz3kSy7KpO0KJwVAQACGHUtcr2oA6eclhoZxFfACGf+kNW/ViCYozs36l6tcYgzZq1FKmC+vnp9k8=
   file: 
-    - sourceSummaries.pdf
-    - SecurityAnalysisOfLenelBlueDiamond.pdf
+    - ./paper/sourceSummaries/sourceSummaries.pdf
+    - ./paper/paper/SecurityAnalysisOfLenelBlueDiamond.pdf
   overwrite: true
   cleanup: false
   on:
