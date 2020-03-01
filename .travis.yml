@@ -16,15 +16,15 @@ addons:
 
 script:
 - cd ./paper/sourceSummaries
-- pdflatex -interaction=nonstopmode -halt-on-error *.tex
-- bibtex sourceSummaries.aux
-- pdflatex -interaction=nonstopmode -halt-on-error *.tex
-- pdflatex -interaction=nonstopmode -halt-on-error *.tex
+- pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
+- bibtex sourceSummaries
+- pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
+- pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
 - cd ../paper
-- pdflatex -interaction=nonstopmode -halt-on-error *.tex
-- bibtex paper.aux
-- pdflatex -interaction=nonstopmode -halt-on-error *.tex
-- pdflatex -interaction=nonstopmode -halt-on-error *.tex
+- pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
+- bibtex paper
+- pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
+- pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
 
 deploy:
   provider: releases
