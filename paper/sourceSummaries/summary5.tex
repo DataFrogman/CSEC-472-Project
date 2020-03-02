@@ -1,7 +1,7 @@
 \section{Summary 5}
 
 \noindent
-\subsection{Title}
+\subsection{{S}ecurity analysis of {I}nternet-of-{T}hings: {A} case study of august smart lock}
 
 \subsubsection{Group Member}
 
@@ -12,35 +12,44 @@ Daniel Capps
 \subsubsection{Citation}
 
 \Urlmuskip=0mu plus 1mu\relax
-%remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+
+\bibentry{ye2017security}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The authors investigate the security of August smart locks by discussing different threat models for attacking August smart locks. The authors then show different attacks on August smart locks including handshake key leakage, owner account leakage, personal information leakage, and denial of service (DoS) attacks. The authors alongside each attack show a method for dealing with said attacks.
+ 
+
+
+
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+Game Theory. The authors determine different types of attacks and mitigation techniques for smart locks against different types of attacks.
+
+
 
 \subsubsection{Method}
 
 \noindent
-Method
+The authors use different tests for each attack vector using a specific environment. The four attack vectors described by the authors are handshake key leakage, owner account leakage, personal information leakage and DoS attacks. Handshake key leakage is an attack that makes use of the fact that the owner’s handshake key is in plain text on their phone. Allowing them to make covert changes to the owner’s lock. The owner account attack allows an adversary to mimic the original owner’s account and send commands to the lock as if they were them. They simply have to replace their system file from the app with the owners and they’re in. Personal information leakage is just the data on the phone in plaintext. DoS attack is when there are multiple users connecting to a single lock, it will suspend the app and no user is able to lock/unlock at the same time.
+
+
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The authors proposed mitigation methods for the four different attacks. The first method is requiring authentication with lock controlling requests. Denying the attacker the ability to even with the owner’s handshake key to make covert changes to their lock. The second method is to have an authentication mechanism to protect the system files from improper use. The authors recommend using FlaskDroid which is mandatory access control for Android. The third method is to just encrypt the data on the phone. The fourth method is to have a simple priority-based request control mechanism allowing the most authorized party to gain priority instead of having no one be able to control the lock.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+Does FlaskDroid have secure file access control? Are there any authentication mechanisms for smart locks to detect fake apps? How would someone develop a holistic security framework to secure IoT devices?
 
 \Urlmuskip=0mu plus 1mu\relax
+
 
 \noindent
 \subsection{BLE Injection-Free Attack: A Novel Attack On Bluetooth Low Energy Devices}
@@ -85,7 +94,7 @@ The authors believe that future research should go into automating injection fre
 \Urlmuskip=0mu plus 1mu\relax
 
 \noindent
-\subsection{Title}
+\subsection{{Y}ou {C}an {C}lone {B}ut {Y}ou {C}an't {H}ide: {A} {S}urvey of {C}lone {P}revention and {D}etection for {RFID}}
 
 \subsubsection{Group Member}
 
@@ -97,32 +106,32 @@ Joshua Niemann
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{7888545}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+ The authors evaluate RFID cards and the ease of cloning them using various cloning countermeasures.
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+ The authors demonstrate Game Theory by directly comparing different card-cloning prevention techniques and their overall effectiveness.
 
 \subsubsection{Method}
 
 \noindent
-Method
+ The authors evaluate the practicality of each detection technique or anti-cloning to determine the best option for an organization looking to secure their enviornment.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+ The authors found that card cloning is hard to particularly stop.  Card cloning prevention requires a secret to be kept, and as long as the secret has to be transmitted to the reader at some point, the secret can be intercepted.  Encryption isn't often too much help either, due to the low-powered nature of the RFID cards in question.  Detection on the other hand is often a much better option.  With detection, you can probalistically determine if a user is likely a clone using enviornmental attributes as well.  This could entail detection based on a location that is improbable for a legitimate tag to be, or subsequent scans that are too far apart from each other.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+ The authors specify no formal future directions for this research, but do mention that further research on how to detect cloning attacks is not only necesary, but required for the security of every RFID system.  The paper also mentions that more can be done on the hardware security front, such as better readers, better hash algorithms to avoid collision, strengthening the reliability of wireless connections, and better encryption techniques. 
 
 \Urlmuskip=0mu plus 1mu\relax
 
