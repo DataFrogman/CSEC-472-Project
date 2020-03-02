@@ -178,7 +178,7 @@ Future Directions
 \Urlmuskip=0mu plus 1mu\relax
 
 \noindent
-\subsection{Title}
+\subsection{Security Analysis of Vendor Customized Code in Firmware of Embedded Devices}
 
 \subsubsection{Group Member}
 
@@ -190,32 +190,32 @@ Quintin Walters
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{liuSecurityAnalysis}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The authors propose that the vendor customized code within device firmware is the most likely attack vector.  They cover the tools to analyze this section, methodology to test it, and then analyze five embedded devices.
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+The authors implement Game Theory in this article.  They examine multiple devices for security threats and treat it as a zero sum game.
 
 \subsubsection{Method}
 
 \noindent
-Method
+The authors assess five devices: the TP-Link WR740nv5, TOTOLINK A850R, HUAQIN HGU421, Thunder Money Maker, and Yi Smart Webcam.  They check hte device's standard functionality and then test the sections for vulnerabilities.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The authors discover that the TP-Link WR740nv5 and the Thunder Money Maker do not perform code integrity checks.  The TOTOLINK A850R has a vulnerability in its authentication method that can cause a web server crash if an attacker sends a carefully crafted request.  Finally, the Yi Smart Webcam is vulnerable to Man-In-The-Middle attacks and the camera will respond to anyone on TCP port 38888 with the session key.  These vulnerabilities were all found in the vendor specific code for the devices, proving the author's point about the possible weakness there.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+The authors recommend further development in current firmware analysis tools.  Further research can be done to better them and the implementation of standards for vendor code segments in embedded devices.
 
 \Urlmuskip=0mu plus 1mu\relax
 \pagebreak
