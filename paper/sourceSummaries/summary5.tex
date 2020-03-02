@@ -1,7 +1,7 @@
 \section{Summary 5}
 
 \noindent
-\subsection{Title}
+\subsection{{S}ecurity analysis of {I}nternet-of-{T}hings: {A} case study of august smart lock}
 
 \subsubsection{Group Member}
 
@@ -12,35 +12,44 @@ Daniel Capps
 \subsubsection{Citation}
 
 \Urlmuskip=0mu plus 1mu\relax
-%remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+
+\bibentry{ye2017security}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The authors investigate the security of August smart locks by discussing different threat models for attacking August smart locks. The authors then show different attacks on August smart locks including handshake key leakage, owner account leakage, personal information leakage, and denial of service (DoS) attacks. The authors alongside each attack show a method for dealing with said attacks.
+ 
+
+
+
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+Game Theory. The authors determine different types of attacks and mitigation techniques for smart locks against different types of attacks.
+
+
 
 \subsubsection{Method}
 
 \noindent
-Method
+The authors use different tests for each attack vector using a specific environment. The four attack vectors described by the authors are handshake key leakage, owner account leakage, personal information leakage and DoS attacks. Handshake key leakage is an attack that makes use of the fact that the owner’s handshake key is in plain text on their phone. Allowing them to make covert changes to the owner’s lock. The owner account attack allows an adversary to mimic the original owner’s account and send commands to the lock as if they were them. They simply have to replace their system file from the app with the owners and they’re in. Personal information leakage is just the data on the phone in plaintext. DoS attack is when there are multiple users connecting to a single lock, it will suspend the app and no user is able to lock/unlock at the same time.
+
+
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The authors proposed mitigation methods for the four different attacks. The first method is requiring authentication with lock controlling requests. Denying the attacker the ability to even with the owner’s handshake key to make covert changes to their lock. The second method is to have an authentication mechanism to protect the system files from improper use. The authors recommend using FlaskDroid which is mandatory access control for Android. The third method is to just encrypt the data on the phone. The fourth method is to have a simple priority-based request control mechanism allowing the most authorized party to gain priority instead of having no one be able to control the lock.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+Does FlaskDroid have secure file access control? Are there any authentication mechanisms for smart locks to detect fake apps? How would someone develop a holistic security framework to secure IoT devices?
 
 \Urlmuskip=0mu plus 1mu\relax
+
 
 \noindent
 \subsection{Title}
