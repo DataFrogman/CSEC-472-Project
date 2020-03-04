@@ -27,7 +27,7 @@ script:
 - pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
 - cd ../wireframe
 - pdflatex -interaction=nonstopmode -file-line-error -halt-on-error *.tex
-- bibtex wireframe.aux
+- bibtex wireframe
 - pdflatex -interaction=nonstopmode -file-line-error -halt-on-error *.tex
 - pdflatex -interaction=nonstopmode -file-line-error -halt-on-error *.tex
 
