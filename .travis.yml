@@ -25,6 +25,11 @@ script:
 - bibtex paper
 - pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
 - pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
+- cd ../wireframe
+- pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
+- bibtex wireframe
+- pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
+- pdflatex -interaction=batchmode -file-line-error -halt-on-error *.tex
 
 deploy:
   provider: releases
@@ -33,6 +38,7 @@ deploy:
   file: 
     - $TRAVIS_BUILD_DIR/paper/sourceSummaries/sourceSummaries.pdf
     - $TRAVIS_BUILD_DIR/paper/paper/paper.pdf
+    - $TRAVIS_BUILD_DIR/paper/wireframe/wireframe.pdf
   overwrite: true
   cleanup: false
   on:
