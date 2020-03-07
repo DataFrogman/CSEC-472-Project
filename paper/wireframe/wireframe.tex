@@ -109,19 +109,23 @@ To help frame your paper's review of prior research, consider the "five C’s" o
 %\end{figure}
 
 \section{Research Design \& Methods}
-This section must be well-written and logically organized because you are not actually doing the research, yet, your reader must have confidence that it is worth pursuing. The reader will never have a study outcome from which to evaluate whether your methodological choices were the correct ones. Thus, the objective here is to convince the reader that your overall research design and proposed methods of analysis will correctly address the problem and that the methods will provide the means to effectively interpret the potential results. Your design and methods should be unmistakably tied to the specific aims of your study.
+To provide a well rounded analysis of the device we expect three primary areas of research.  First, we expect to perform attacks against the physical security of the device.  Second, we will analyze the firmware for vulnerabilities.  Finally, we plan on testing the application and Bluetooth implementation.
 
-Describe the overall research design by building upon and drawing examples from your review of the literature. Consider not only methods that other researchers have used but methods of data gathering that have not been used but perhaps could be. Be specific about the methodological approaches you plan to undertake to obtain information, the techniques you would use to analyze the data, and the tests of external validity to which you commit yourself [i.e., the trustworthiness by which you can generalize from your study to other people, places, events, and/or periods of time].
+The phyisical security of the lock, particularly the magnetic antitamper switch, is what protects it from well known attacks against the Wiegand protocol.  If the physical security can be bypassed than attackers could take advantage of these other attacks to bypass the lock entirely.
 
-When describing the methods you will use, be sure to cover the following:
+Firmware analysis is necessary to discover underlying vulnerabilities.  The vulnerabilities discovered here may include hardcoded credentials, service backdoors, and poorly implemented authentication methods.  These vulnerabilites would not be obvious or easily detectible without dissecting the firmware.
+
+The application and Bluetooth implementation are the primary means which users will be interacting with the device.  Any vulnerabilities here will be exposed to outside attackers on a daily basis.  Any attacker within 30ft of the device can snoop on the Bluetooth traffic.  The application is also downbloadable on the Google Play Store for free, any vulnerabilities in it would be easily accessible to an attacker.
+
+\subsection{Firmware Analysis}
 \begin{itemize}
-    \item Specify the research process you will undertake and the way you will interpret the results obtained in relation to the research problem. Don't just describe what you intend to achieve from applying the methods you choose, but state how you will spend your time while applying these methods [e.g., coding text from interviews to find statements about the need to change school curriculum; running a regression to determine if there is a relationship between campaign advertising on social media sites and election outcomes in Europe].
-    \item Keep in mind that the methodology is not just a list of tasks; it is an argument as to why these tasks add up to the best way to investigate the research problem. This is an important point because the mere listing of tasks to be performed does not demonstrate that, collectively, they effectively address the research problem. Be sure you clearly explain this.
-    \item Anticipate and acknowledge any potential barriers and pitfalls in carrying out your research design and explain how you plan to address them. No method is perfect so you need to describe where you believe challenges may exist in obtaining data or accessing information. It's always better to acknowledge this than to have it brought up by your professor.
-    \end{itemize}
-\subsection{Procedures}
-\subsection{Timeline}
-\subsection{Novel Techniques}
+    \item Search for hard-coded credentials.
+    \item Search for vulnerabilities such as buffer overflows, default certificates, debugging services, open ports, etc.
+    \item Search for improperly implemented authentication and cryptographic methods.
+    \item Search for any unpatched vulnerabilities in dependencies and base code such as BlueBorne.
+\end{itemize}
+
+Firmware analysis is a solid foundation for the research to build upon.  The firmware is the software that runs on and controls the device as a whole, vulnerabilities evident in it reduce the security of the device as a whole and can lead to vulnerabilities in other areas.  The firmware analysis will be performed with automated tools at first, followed by manual analysis to confirm any discoveries.  A final pass through with manual analysis will then be done to spot any missed or overlooked vulnerabilities.  The methods of analysis will vary, depending on if we are supplied with the firmware or if we have to extract it from the device ourselves.  If we are provided with the firmware source code we can do analysis directly on that, if we need to extract it ourselves we will have to disassemble it and spend a large amount of time reverse engineering in order to find any vulnerabilities.
 
 \section{Preliminary Suppositions \& Implications}
 Just because you don't have to actually conduct the study and analyze the results, doesn't mean you can skip talking about the analytical process and potential implications. The purpose of this section is to argue how and in what ways you believe your research will refine, revise, or extend existing knowledge in the subject area under investigation. Depending on the aims and objectives of your study, describe how the anticipated results will impact future scholarly research, theory, practice, forms of interventions, or policymaking. Note that such discussions may have either substantive [a potential new policy], theoretical [a potential new understanding], or methodological [a potential new way of analyzing] significance.
@@ -161,7 +165,7 @@ Anyone to thank/credit for helping your team along the way? This is the place to
 \section{Appendix}
 Appendices are optional sections that should include additional tables, figures, or other data beyond what is included in the results section. An appendix should be able to stand separately from the prinicpal article. Therefore, no references (callouts) to appendix figures or tables should be made in the principal article. If required, the appendix should have its own bibliographic reference list with citations to that list confined to the appendix. \cite{latexcompanion}
 
-\bibliographystyle{vancouver}
+\bibliographystyle{ieee}
 \bibliography{references}
 
 \bibentry{test}
