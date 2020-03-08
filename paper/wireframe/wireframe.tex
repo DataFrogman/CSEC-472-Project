@@ -109,13 +109,13 @@ To help frame your paper's review of prior research, consider the "five C’s" o
 %\end{figure}
 
 \section{Research Design \& Methods}
-To provide a well rounded analysis of the device we expect three primary areas of research.  First, we expect to perform attacks against the physical security of the device.  Second, we will analyze the firmware for vulnerabilities.  Finally, we plan on testing the application and Bluetooth implementation.
+To provide a well rounded analysis of the device there are three primary areas of research.  First, attacks against the physical security of the device.  Second, analysis of the firmware for vulnerabilities.  Finally, testing the application and Bluetooth implementation.
 
 The phyisical security of the lock, particularly the magnetic antitamper switch, is what protects it from well known attacks against the Wiegand protocol.  If the physical security can be bypassed than attackers could take advantage of these other attacks to bypass the lock entirely.
 
 Firmware analysis is necessary to discover underlying vulnerabilities.  The vulnerabilities discovered here may include hardcoded credentials, service backdoors, and poorly implemented authentication methods.  These vulnerabilites would not be obvious or easily detectible without dissecting the firmware.
 
-The application and Bluetooth implementation are the primary means which users will be interacting with the device.  Any vulnerabilities here will be exposed to outside attackers on a daily basis.  Any attacker within 30ft of the device can snoop on the Bluetooth traffic.  The application is also downbloadable on the Google Play Store for free, any vulnerabilities in it would be easily accessible to an attacker.
+The application and Bluetooth implementation are the primary means which users will be interacting with the device.  Any vulnerabilities here will be exposed to outside attackers on a daily basis.  Any attacker within 30ft of the device can snoop on the Bluetooth traffic.  The application is also downloadable on the Google Play Store for free, any vulnerabilities in it would be easily accessible to an attacker.
 
 \subsection{Firmware Analysis}
 \begin{itemize}
@@ -125,8 +125,7 @@ The application and Bluetooth implementation are the primary means which users w
     \item Search for any unpatched vulnerabilities in dependencies and base code such as BlueBorne.
 \end{itemize}
 
-Firmware analysis is a solid foundation for the research to build upon.  The firmware is the software that runs on and controls the device as a whole, vulnerabilities evident in it reduce the security of the device as a whole and can lead to vulnerabilities in other areas.  The firmware analysis will be performed with automated tools at first, followed by manual analysis to confirm any discoveries.  A final pass through with manual analysis will then be done to spot any missed or overlooked vulnerabilities.  The methods of analysis will vary, depending on if we are supplied with the firmware or if we have to extract it from the device ourselves.  If we are provided with the firmware source code we can do analysis directly on that, if we need to extract it ourselves we will have to disassemble it and spend a large amount of time reverse engineering in order to find any vulnerabilities.
-
+Firmware analysis is a solid foundation for the research to build upon.  The firmware is the software that runs on and controls the device as a whole, vulnerabilities evident in it reduce the security of the device as a whole and can lead to vulnerabilities in other areas.  Firmware analysis is performed with automated tools at first, followed by manual analysis to confirm any discoveries.  A final pass through with manual analysis is done to spot any missed or overlooked vulnerabilities.  The methods of analysis will vary, depending on if the firmware is supplied or if it must be extracted it from the device.  If the firmware is provided then analysis can be performed directly, otherwise extraction must be performed and the compiled firmware will be analyzed.
 
 \subsection{Physical Analysis}
 \begin{itemize}
