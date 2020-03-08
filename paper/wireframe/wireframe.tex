@@ -127,6 +127,16 @@ The application and Bluetooth implementation are the primary means which users w
 
 Firmware analysis is a solid foundation for the research to build upon.  The firmware is the software that runs on and controls the device as a whole, vulnerabilities evident in it reduce the security of the device as a whole and can lead to vulnerabilities in other areas.  The firmware analysis will be performed with automated tools at first, followed by manual analysis to confirm any discoveries.  A final pass through with manual analysis will then be done to spot any missed or overlooked vulnerabilities.  The methods of analysis will vary, depending on if we are supplied with the firmware or if we have to extract it from the device ourselves.  If we are provided with the firmware source code we can do analysis directly on that, if we need to extract it ourselves we will have to disassemble it and spend a large amount of time reverse engineering in order to find any vulnerabilities.
 
+\subsection{Physical Analysis}
+\begin{itemize}
+    \item Search the lock for potential physical bypass attacks 
+    \item Search for issues with the magnetic anti-tamper switch
+    \item Search the lock for easy access to Wiegand protocol leads
+    \item Search for potential areas of destructive entry
+\end{itemize}
+
+Enterprise locks often have many potential types of issues from the perspective of a physical attack.  The authors expect to find potential implementation errors in areas such as the configuration of the anti-tamper switch, the location of the connectors to the Wiegand network, or access to the locking motor from within the device.  In order to detect these issues, the authors will analyze the lock from the perspective of a typical wall-mounted installation.  From there, the authors will look into various ways to both undestructively, and destructively trigger an unlock.  In a physical test, a vulnerability can take a lot of different forms.  
+
 \section{Preliminary Suppositions \& Implications}
 Just because you don't have to actually conduct the study and analyze the results, doesn't mean you can skip talking about the analytical process and potential implications. The purpose of this section is to argue how and in what ways you believe your research will refine, revise, or extend existing knowledge in the subject area under investigation. Depending on the aims and objectives of your study, describe how the anticipated results will impact future scholarly research, theory, practice, forms of interventions, or policymaking. Note that such discussions may have either substantive [a potential new policy], theoretical [a potential new understanding], or methodological [a potential new way of analyzing] significance.
  
