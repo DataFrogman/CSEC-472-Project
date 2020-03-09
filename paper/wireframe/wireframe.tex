@@ -38,60 +38,25 @@
 \maketitle
 \selectlanguage{english}
 \begin{abstract}
-%The abstract is in a sense the most important part of your paper, since many readers will scan an abstract first before deciding to invest effort in reading the paper.
-%
-%An abstract should be about 300 words long at most, and should act as a clear summary of the paper. It should state the aim and scope of the research, methods, results and conclusions, and the implications of the paper’s finding. The abstract should be broadly accessible (i.e. able to be understood by as many people as possible - even those outside the field) and communicate the importance of the work being done. 
-%
-%Structure the abstract as follows: background and aims, methods, results and conclusion. 
-%
-%Examples of some decent abstracts can be found \href{http://journal.stemfellowship.org/userimages/ContentEditor/1451371646443/AbstractExamples.pdf}{here}, with the main ideas highlighted.
 
-Bluetooth technology has been around since the mid 1990's. It's adoption into consumer technology has made it a mainstream protocol for those developing compatible hardware. Unfortunately, weak security in it's underlying design has also made it a target for multiple different forms of attack. This can be especially dangerous when the compatible device is used for access control. In this paper we study a specific subset of devices from Lenel's new BlueDiamond lineup, testing a variety of methods that have proven affective on similarly designed hardware. These methods included assessments of physical hardware, firmware, and connected BlueDiamond mobile app for vulnerabilities and could result in a breach of access control. Our testing found that... \todo{Put results here}
+Bluetooth technology has been around since the mid 1990's. It's adoption into consumer technology has made it a mainstream protocol for those developing compatible hardware. Unfortunately, weak security in it's underlying design has also made it a target for multiple different forms of attack. This can be especially dangerous when the compatible device is used for access control. In this paper we study a specific subset of devices from Lenel's new BlueDiamond lineup, testing a variety of methods that have proven affective on similarly designed hardware. These methods included assessments of physical hardware, firmware, and connected BlueDiamond mobile app for vulnerabilities and could result in a breach of access control.
 
 \end{abstract} 
 
-\section*{Keywords}
-%Select keywords with care, because they will help users discover your paper. To determine appropriate keywords, put yourself in the position of someone who is trying to search for a paper like yours. What search terms would you use? From those terms, select a list of at least three and no more than five words. Include these words in the text of the abstract and if at all possible, in the title of the paper.
-\todo{add keywords}
+\section{Keywords}
+
+Bluetooth
 
 \section{Introduction}
-%Before we get to the actual introduction, welcome to Overleaf, as well as \LaTeX\ itself! Although \LaTeX\ certainly has its quirks, we hope that by contrasting the template you see here with the compiled document on the right side, you can get an intuitive sense of how to work with it.
-%
-%Another thing before the introduction; here, I'm going attach a citation to this sentence \cite{latexcompanion}. Scroll on down to the bibliography section of the \LaTeX\ code if you'd like to see the other end of the built-in references system. The numbering is all handled in-house -- you just have to assign each reference a key, and Overleaf takes care of the rest.
-%
-%On with the actual introduction! The introduction should provide context and background information appropriate for an academic audience. It should state a focused research question, define the variables being studied, and make clear the objective, importance, and relevance of the work.
-%
-%Here is where you'd introduce the context surrounding your study. What led you to the question you ended up asking? Why is it relevant? Which fields of science is your question based around? What has previous literature demonstrated?
-%
-%While the structure of the previous parts of the introduction can be relatively variable, you must make sure to provide a brief overview of the study itself, and the methods you used to accomplish it. Obviously, excessive detail is not necessary (that's what the next section is for). Lastly, be sure to make mention of the potential implications of your findings, but once again remember that you'll be going into more detail about that in the discussion.
-%
-%\textbf{For your Auth Paper:} treat your introduction as the initial pitch of an idea or a thorough examination of the significance of a research problem. After reading the introduction, your readers should not only have an understanding of what you want to do, but they should also be able to gain a sense of your passion for the topic and to be excited about the study's possible outcomes.
-%
-%Think about your introduction as a narrative written in \textbf{two to four paragraphs} that succinctly answers the following four questions:
-%\begin{enumerate}
-%   \item What is the central research problem?
-%   \item What is the topic of study related to that research problem?
-%    \item What methods should be used to analyze the research problem?
-%   \item Why is this important research, what is its significance, and why should someone reading the paper care about the outcomes of the proposed study?
-%\end{enumerate}
 
 In the last couple of years, the physical security community has seen an abundace of standard mechanical locks being replaced with \"smart locks\" designed to make accessing secure areas simpler and safer. Only to discover that these smart locks can be opened with just as little effort as picking a standard lock requires. In response to this, corporations have been rolling out revision after revision of their smart lock technology to try and combat the evolution of access control bypass.
 
 Our research revolves around the latest in smart lock technology from Lenels BlueDiamond range. We will use a variety of previously proven methods to attempt to make an unauthorized bypass of the access control upheld be these devices. Methods including physical testing of the wiegand hardware within the device, code review of the device firmware, and analysis of the connection between the device and compatible mobile app for potential vulnerabilities.
 
-Smart locks are the future of physical access control technology, and research from us and other likeminded individuals will ensure that the smart locks deployed in the future are free from as many known issues as possible. Our results determine that... \todo{put results here}
+Smart locks are the future of physical access control technology, and research from us and other likeminded individuals will ensure that the smart locks deployed in the future are free from as many known issues as possible.
 
 \section{Background \& Significance}
-The purpose of this research is to test the security properties of the Lenel Blue Diamond Readers and to uncover different vulnerabilities in them so that they can be disclosed properly and eventually patched. Lenel has over 1 million Blue Diamond readers deployed in multiple industries, the most notable one being real-estate \cite{lenelbluediamondwebsite}. This study is important because the security of these locks are very important because if someone unauthorized is able to enter through these locked doors, everything on the other side would be compromised including important data, objects, and even people. Things which if they were compromised would result in extreme loss. For our research the major issues we found fall into three categories, the firmware used on the lock, the physical aspect of the lock, and the usage of the mobile app and bluetooth communication. We plan to conduct our research by using trusted sources on the subject and testing their conclusions on Lenel Blue Diamond readers. We plan to conduct our research by using trusted sources on the subject and testing their conclusions on Lenel Blue Diamond readers. Our research has it bounds inside the Lenel Blue Diamond readers mobile app and lock itself. We will 
-
-\begin{itemize}
-   \item State the research problem and give a more detailed explanation about the purpose of the study than what you stated in the introduction. This is particularly important if the problem is complex or multifaceted.
-    \item Present the rationale of your proposed study and clearly indicate why it is worth doing; be sure to answer the "So What? question [i.e., why should anyone care].
-    \item Describe the major issues or problems to be addressed by your research. This can be in the form of questions to be addressed. Be sure to note how your proposed study builds on previous assumptions about the research problem.
-    \item Explain the methods you plan to use for conducting your research. Clearly identify the key sources you intend to use and explain how they will contribute to your analysis of the topic.
-   \item Describe the boundaries of your proposed research in order to provide a clear focus. Where appropriate, state not only what you plan to study, but what aspects of the research problem will be excluded from the study.
-   \item If necessary, provide definitions of key concepts or terms.
-\end{itemize}
+The purpose of this research is to test the security properties of the Lenel Blue Diamond Readers and to uncover different vulnerabilities in them so that they can be disclosed properly and eventually patched. Lenel has over 1 million Blue Diamond readers deployed in multiple industries, the most notable one being real-estate \cite{lenelbluediamondwebsite}. This study is important because the security of these locks are very important because if someone unauthorized is able to enter through these locked doors, everything on the other side would be compromised including important data, objects, and even people. Things which if they were compromised would result in extreme loss. For our research the major issues we found fall into three categories, the firmware used on the lock, the physical aspect of the lock, and the usage of the mobile app and bluetooth communication. We plan to conduct our research by using trusted sources on the subject and testing their conclusions on Lenel Blue Diamond readers. We plan to conduct our research by using trusted sources on the subject and testing their conclusions on Lenel Blue Diamond readers. Our research has it bounds inside the Lenel Blue Diamond readers mobile app and lock itself.
 
 \section{Related Work}
 
@@ -109,12 +74,6 @@ To help frame your paper's review of prior research, consider the "five C’s" o
     \item Critique the literature: Which arguments are more persuasive, and why? Which approaches, findings, and methodologies seem most reliable, valid, or appropriate, and why? Pay attention to the verbs you use to describe what an author says/does [e.g., asserts, demonstrates, argues, etc.].
     \item Connect the literature to your own area of research and investigation: how does your own work draw upon, depart from, synthesize, or add a new perspective to what has been said in the literature?
 \end{itemize}
-    
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=0.4\textwidth]{test.png}
-%  \caption{Notice how \LaTeX\ automatically numbers this figure.}
-%\end{figure}
 
 \section{Research Design \& Methods}
 To provide a well rounded analysis of the device there are three primary areas of research.  First, attacks against the physical security of the device.  Second, analysis of the firmware for vulnerabilities.  Finally, testing the application and Bluetooth implementation.
@@ -187,16 +146,11 @@ Someone reading this section should come away with an understanding of:
 \end{itemize}
 
 \section{Acknowledgements}
-In the Acknowledgements section, the author(s) acknowledge or thank any persons or institutions who helped support the work in any way. In particular, this section must disclose any funding for the research completed, including the grant number (if a grant was awarded).
-
-Anyone to thank/credit for helping your team along the way? This is the place to do it.
-
-\section{Appendix}
-Appendices are optional sections that should include additional tables, figures, or other data beyond what is included in the results section. An appendix should be able to stand separately from the prinicpal article. Therefore, no references (callouts) to appendix figures or tables should be made in the principal article. If required, the appendix should have its own bibliographic reference list with citations to that list confined to the appendix. \cite{latexcompanion}
+We would like to thank Lenel for access to their BlueDiamond lock and permission to conduct a test of its security. 
 
 \bibliographystyle{ieee}
 \bibliography{references}
 
-\bibentry{test}
+\bibentry{lenelbluediamondwebsite}
 
 \end{document}
