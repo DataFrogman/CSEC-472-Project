@@ -43,7 +43,7 @@ Future Directions
 \Urlmuskip=0mu plus 1mu\relax
 
 \noindent
-\subsection{Title}
+\subsection{Bluetooth: With Low Energy comes Low Security}
 
 \subsubsection{Group Member}
 
@@ -55,32 +55,32 @@ Connor Leavesley
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{rmike13}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The simplification of Bluetooth Low Energy to reduce power use caused a number of security issues. The author gives an overview of Bluetooth Low Energy, BLE packet injection, and encryption weaknesses. 
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+This paper is utilizing Game Theory. The author attacks the BLE protocol in a zero sum game. 
 
 \subsubsection{Method}
 
 \noindent
-Method
+The author implements several types of Bluetooth attacks utilizing an Ubertooth: eavesdropping, packet injection, and bypassing encryption. He then explores the flaws and devises a number of mitigations to fix the issues present. 
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The author found that attacking BLE is trivial after a few, small technical hurdles. To eavesdrop on a BLE device, an attacker needs to know the hop interval, hop increment, access address, and CRC init. Ryan used this information to calculate which of the 37 channels the connection would switch to next. There are three types of methods to set up a Temporary Key (TK) for BLE, Just Works, with a key of all zeros, a six digit pin, or OOB, which is an agreed out-of-band 128 bit key. The author found that this key could be brute forced in less than a second if the device used a six digit pin. He can use the TK to derive the Short Term Key, and that to derive the Long Term Key. OOB is far harder for an attacker to crack, but exchanging a key out-of-band is difficult and not practical in practice. 
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+The author believes that future researchers should investigate main-in-the-middle attacks against Bluetooth devices to increase the effectiveness of the proposed attacks. 
 
 \Urlmuskip=0mu plus 1mu\relax
 
