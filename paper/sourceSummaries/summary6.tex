@@ -1,7 +1,7 @@
 \section{Summary 6}
 
 \noindent
-\subsection{Title}
+\subsection{{A}n efficient access control scheme for smart lock based on asynchronous communication}
 
 \subsubsection{Group Member}
 
@@ -12,35 +12,46 @@ Daniel Capps
 \subsubsection{Citation}
 
 \Urlmuskip=0mu plus 1mu\relax
-%remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+
+\bibentry{han2019efficient}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The authors propose an asynchronous and consistent lock access management scheme to avoid unauthorized access through the lock. The authors also present a lightweight and efficient tree-based access control solution to such smart lock network’s problems, which enable cascading deletion. 
+
+ 
+
+
+
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+Game Theory. The authors propose mitigation techniques for smart locks to defend against different exploits, primarily evasion attacks.
+
+
 
 \subsubsection{Method}
 
 \noindent
-Method
+The authors proposed secure command transmission and a tree based access control system and then evaluated their proposed systems. The secure command transmission system is a device centered system that has two phases, the user-lock phase and the user-cloud phase. In the user-lock phase, users give an unlock request or forward the commands from the cloud to the smart lock. In the user-cloud phase, users are able to send and receive access control commands from the cloud. During this process there is a preprocessor in the smart lock that checks the security of incoming requests and determines how to handle them. The tree based access control system (TACS) is stored directly on the smart lock and every command from the owner is performed on this tree. The smart lock maintains this tree by executing commands sent by the owner. When a user’s request comes to TACS, it checks whether the user is authorized to make that request or not. 
+
+
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The authors found that against evasion attacks their scheme forces each user to connect to the cloud to get a valid period, which only then can the user unlock the door. However adversaries can still unlock the door within the valid period (authors set it to 24 hours) just after being revoked. The authors weren’t able to have all information updated immediately after an owner's command is sent due to their asynchronous communication scheme. All operations on the tree took less than 100 milliseconds in the authors experiments and in most cases the tree took up less than 1 MB and could store up to 12 nodes.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+Can the scheme used here for smart locks be expanded into other fields? Is there a way to remove the valid window so that adversaries can’t use the lock immediately upon being revoked?
+
 
 \Urlmuskip=0mu plus 1mu\relax
+
 
 \noindent
 \subsection{Bluetooth: With Low Energy comes Low Security}
