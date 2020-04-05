@@ -127,7 +127,7 @@ Future Directions
 \Urlmuskip=0mu plus 1mu\relax
 
 \noindent
-\subsection{Title}
+\subsection{C}onfidence in {S}mart {T}oken {P}roximity: {R}elay {A}ttacks {R}evisited
 
 \subsubsection{Group Member}
 
@@ -139,32 +139,32 @@ Jacob Ruud
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{hancke2009confidence}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The authors revisit the fesibility of implementing both passive and active relay attacks against smart tokens. They also discuss the security implications should the attackers succeed. Finally, the authors discuss possible actions that device owners could take to mitigate the risk of these attacks.
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+The authors use game theory to explain the red vs blue scenario, treating a win for red as a breach of information and a win for blue as witholding access control.
 
 \subsubsection{Method}
 
 \noindent
-Method
+The authors utilize a proxy-token and proxy-reader to create a virtual clone of the authenticated users access card and relay it to the reader. This can be done by creating your own hardware or using existing tools. The authors chose to implement their own proxy reader and proxy token for this experiment.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+the authors were able to successfully perfom a relay attack against an ISO 14443A contactless system using guidelines in public literature and easily obtainable hardware. They also found that timing constraints have little to no effect against relay attacks, and although 2FA is effective if nullifies some of the advantages of smart token systems. The authors suggest using distance bounding or monitoring using a trusted interface as more effective methods against this attack, although they warn that these methods are generally more expensive or complex. 
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+The authors leave open the option for further research on methods against relay attacks since they believe that the methods they proposed could be improved upon.
 
 \Urlmuskip=0mu plus 1mu\relax
 
