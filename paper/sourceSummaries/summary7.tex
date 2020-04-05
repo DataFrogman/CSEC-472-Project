@@ -43,7 +43,7 @@ Future Directions
 \Urlmuskip=0mu plus 1mu\relax
 
 \noindent
-\subsection{Title}
+\subsection{Extracting the Security Features Implemented in a Bluetooth LE Connection}
 
 \subsubsection{Group Member}
 
@@ -55,32 +55,32 @@ Connor Leavesley
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{zayas18}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+Many of the IoT devices adopting Bluetooth do not impliment the security features that Bluetooth Special Interest Group developed. To promote visability of this issue, the authors have developed an application to extract the security features of a Bluetooth device to test the security of devices. 
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+The authors are utilizing Systems Theory. They are observing how a device interacts with other Bluetooth devices trying to connect to it.
 
 \subsubsection{Method}
 
 \noindent
-Method
+The authors developed an Android application for two smartphones, the Zenfone Max 3 and the OnePlus 6. They are using  Lenovo HW02 fitness tracker as the second bluetooth device. The app extracts logs from the btsnoop log created by Android devices. The app can discover security information about the connection from the logs.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+When pairing the tracker to the phones the fitness tracker sent the Long Term Key (LTK) to the tracker with no encryption, even though both are using Bluetooth 4.2. When using the app, this was not the case. Unfortunately the authors did not go into greater detail about what security features were found, only focusing on the inital transfer of the LTK. 
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+The authors believe that future research should be done in further improving the security of BLE, as it is here to stay. 
 
 \Urlmuskip=0mu plus 1mu\relax
 
