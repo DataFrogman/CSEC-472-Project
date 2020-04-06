@@ -181,7 +181,7 @@ The authors leave open the option for further research on methods against relay 
 \Urlmuskip=0mu plus 1mu\relax
 
 \noindent
-\subsection{Title}
+\subsection{Portable RFID Bumping Device}
 
 \subsubsection{Group Member}
 
@@ -193,32 +193,32 @@ Quintin Walters
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{dijkPortableBumping}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The authors proposed that RFID cards may be vulnerable to a high speed cloning attack performed by bumping into the target.  They posit that this attach can be used to gain clones of security cards without the target's knowledge or raising suspicion.
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+Game Theory.  By showing the ease of cloning the cards the authors show that they are broken and need increased security in order to stay useful.
 
 \subsubsection{Method}
 
 \noindent
-Method
+The authors used a Proxmark 3, a LG Nexus 5 with Nethunter, a Hirose usb cable, MIFARE Classic 1K, and MIFARE Classic EV1 1K.  The authors wrote a default key to the cards and then a large number of random keys.  They then generated a large number of random keys to try and gathered a large number of nonces to perform their attack.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The authors found that the HF Hirose Antenna increased the range to 6-8cm.  They also successfully implemented BTWA to read multiple cards.  The attacks against the cards were successefully performed against both the Classic and the Classic EV1.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+The authors posit that more research can be done into the maximum number of cards that can be read at one time.  They also believes that the attack framework can be extended to support more attacks, optimization can be performed on the keyspace calculation software, attempts can be made to try the attack in an unstable environment, and finally optimazation of the Proxmark firmware.
 
 \Urlmuskip=0mu plus 1mu\relax
 \pagebreak
