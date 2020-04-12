@@ -127,7 +127,7 @@ The authors did not specify any future directions.  However, a logical step here
 \Urlmuskip=0mu plus 1mu\relax
 
 \noindent
-\subsection{Title}
+\subsection{{BLE} {B}roadcasting {I}mpact in a {R}eal {N}etwork {E}nvironment}
 
 \subsubsection{Group Member}
 
@@ -139,32 +139,32 @@ Jacob Ruud
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{boric2017ble}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The Authors examine the traffic sent by individual BLE devices to determine the impact these devices can have on latency in a simulation production environment. They also do tests to determine whether or not broadcast advertisement length has any effect on message delivery.
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+The authors use Scientific Theory to observe and explain the outcome of the experiment following numerous tests adhering to the scientific method.
 
 \subsubsection{Method}
 
 \noindent
-Method
+A Raspberry Pi 2 Model B was used as the base testing hardware for this experiment. In order to achieve the results that they did, the authors also had to equip the device with a Bluefruit LE Sniffer and some specific Bluetooth libraries that are not supported out of the box by raspberry pi (libdbus-1-dev,  libdbus-glib-1-dev,  libglib2.0-dev,  libical-dev, libreadline-dev, libudev-dev, libusb-dev)
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The authors found that the neither the duration of advertisement nor the distance between the advertiser and the collector affect the I/O capabilities of the advertiser if it is alone on the network. However, signs of latency began to show themselves while testing a broadcast with 10 other devices on the network.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+The authors suggest future work would include testing advertisement capabilities of devices moving around on the network since they were only testing static location. They also suggest testing of a more device dense enviroment to see how the pattern they identified grows with more devices.
 
 \Urlmuskip=0mu plus 1mu\relax
 
