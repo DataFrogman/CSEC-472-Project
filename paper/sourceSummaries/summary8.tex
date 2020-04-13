@@ -176,7 +176,7 @@ The authors suggest future work would include testing advertisement capabilities
 \Urlmuskip=0mu plus 1mu\relax
 
 \noindent
-\subsection{Title}
+\subsection{Dismantling iClass and iClass Elite}
 
 \subsubsection{Group Member}
 
@@ -188,32 +188,32 @@ Quintin Walters
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{garciaIClass}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The authors reverse engineer the protocols used in the HID iClass cards in order to find vulnerabilities in the cryptographic algorithms that they implement.  They posited that since the cards relied on Security Through Obscurity there must be vulnerabilities in the implementation.
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+Game Theory, the others posit that there are vulnerabilities that inherently break the security of the cards.
 
 \subsubsection{Method}
 
 \noindent
-Method
+The researchers purchased two readers, they discovered that the chipset used can have one block written to which will reset the write only status. They then ripped the firmware from the reader for analysis.  In there analysis of the firmware they discovered multiple vulnerabilities in the cryptographic methods used on the cards.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The authors found that the HID iClass cards have weak keys when the three rightmosst bits of each byte are identicle, when updating the key on a card the reader sends the XOR of the old key and the new key which allows for key modification, the readers themselves have privilege escalation weaknesses within the read command, the key diversification algorithm uses DES and a proprietary hash0 which introduce a weak key diversification vulnerability, and they discovered a key recovery attack based off of the key diversification weakness.  They also found that the iClass Elite cards have a redundant key diversification weakness, a weak key-byte selection within the diversification algorithm, and a key recovery attack based off of those weaknesses.  The iClass Elite card in fact only needs 15 authentication attempts to recover the master key, something that can be done in under five seconds.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+The authors posit that community reviewed cryptographic algorithms would be better used in the future.  They also posit that systematic and automated model checking can be implemented in order to detect implementation weaknesses like the privilege escalation vulnerability that was discovered in the iClass cards.
 
 \Urlmuskip=0mu plus 1mu\relax
 \pagebreak
