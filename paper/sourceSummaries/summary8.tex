@@ -1,7 +1,7 @@
 \section{Summary 8}
 
 \noindent
-\subsection{Title}
+\subsection{{S}mart-lock security re-engineered using cryptography and steganography}
 
 \subsubsection{Group Member}
 
@@ -12,35 +12,42 @@ Daniel Capps
 \subsubsection{Citation}
 
 \Urlmuskip=0mu plus 1mu\relax
-%remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+
+\bibentry{bapat2017smart}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The authors attempt to analyze the MITM vulnerability of BLE and develop a possible solution for designing smart-locks with an increased level of security. The authors show that using image steganography and cryptography together helps mitigate vulnerabilities of BLE protocol.
+
+
+
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+Game Theory. The authors propose mitigation techniques for MITM attacks in BLE.
+
 
 \subsubsection{Method}
 
 \noindent
-Method
+The authors propose a solution based on using the advantages of both steganography and cryptography which will increase the level of security. The techniques of cryptography and steganography are used to provide security to smart locks. A user first enters the passkey via the android app. Later, an image is selected for the passkey to be embedded into. Using AES encryption, the passkey is encrypted and then encoded in the image which all happens on the client side. The image is sent over BLE 4.0 to the Raspberry Pi. The image is then decoded and decrypted and the passkey is recovered and if it’s correct the smart lock is opened. The authors ran tests on the efficiency of the solution. 
+
+
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+In the authors testing they found that there is a linear relationship between the image size and BLE transfer time which means small images transfer faster. For example, the authors found that an 6.97kb image took 19.8 seconds while an image 1100kb took 137 seconds. The authors also showed images in the paper before and after encoding and concluded that the images had no visual differences between each other.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+Can we make an implementation for the solution that the authors demonstrate? Is there a way to speed up the time constraint without cutting back on security? Can this solution be used to protect other systems from MITM attacks or are there any flaws with the solution shown?
 
 \Urlmuskip=0mu plus 1mu\relax
+
 
 \noindent
 \subsection{Title}
