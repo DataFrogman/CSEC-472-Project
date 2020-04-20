@@ -169,7 +169,7 @@ Future Directions
 \Urlmuskip=0mu plus 1mu\relax
 
 \noindent
-\subsection{Title}
+\subsection{Securing RFID systems by detecting tag cloning}
 
 \subsubsection{Group Member}
 
@@ -181,32 +181,32 @@ Quintin Walters
 
 \Urlmuskip=0mu plus 1mu\relax
 %remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+\bibentry{lehtonen09}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+Cloning RFID cards bypasses the security that they provide.  Detecting the use of cloning could increase the security of an RFID card based solution.
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+Game theory, if cards can be cloned then the security of the system is completely compromised.
 
 \subsubsection{Method}
 
 \noindent
-Method
+The researchers developed a system that would record the synchronized secret on the card.  It would then check if the secret is identical to the most recent secret written to it.  They used EPC Class-1 Gen-2 tags from UPM Raflatac and a CAEN A828EU UHF reader.  Using 100 reads they attempted to use this method to detect cloning.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The authors found that a triggered alarm would be valid 50\% of the time and that a 99.15\% of cloned cards would trigger an alarm.  This has a high false positive rate but a very low false negative rate.
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+The authors do not present possible future directions, however, a possible future direction is to test this implementation with more card types and readers along with testing on an active audience to get more accurate results. 
 
 \Urlmuskip=0mu plus 1mu\relax
 \pagebreak
