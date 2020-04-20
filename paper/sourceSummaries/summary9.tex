@@ -1,7 +1,7 @@
 \section{Summary 9}
 
 \noindent
-\subsection{Title}
+\subsection{{P}rox-{R}{B}{A}{C}: a proximity-based spatially aware {R}{B}{A}{C}}
 
 \subsubsection{Group Member}
 
@@ -12,35 +12,36 @@ Daniel Capps
 \subsubsection{Citation}
 
 \Urlmuskip=0mu plus 1mu\relax
-%remove % to show citation, change the name to your entry
-%\bibentry{filizzola2018security}
+
+\bibentry{kirkpatrick2011prox}
 
 \subsubsection{Main Idea}
 
 \noindent
-Main Idea
+The authors extend spatially aware role-based access control (RBAC) by defining proximity-based RBAC (Prox-RBAC).  In the author’s method the access control decisions are made by considering the primary user’s location and the location of every other user in the system. The authors introduce a spatial model and proximity constraints. The authors also define the Prox-RBAC language which is used to specify policy constraints, introduce their enforcement architecture, and present an informal security analysis. 
 
 \subsubsection{Theory}
 
 \noindent
-Theory
+The authors use Game Theory because they have to prove that their implementation is secure against different attack vectors.
 
 \subsubsection{Method}
 
 \noindent
-Method
+The authors implemented a Prox-RBAC prototype in which they use a centralized authorization server with different clients. In their implementation the clients could be either stationary or mobile devices but would be required to provide a high-integrity proof of location. The authors Prox-RBAC prototype is built on the interaction between four principals. The authorization server (AS) is the centralized server that acts as the policy decision point (PDP). The AS maintains a mapping of all users’ locations and all access control policies. Each user (subject) s will have an id, a password, and a proximity-connection device that is used for generating the proof of location. This device has a secret and a certificate signed by the AS that allows the device to prove they know the secret without the server knowing the secret.
 
 \subsubsection{Findings}
 
 \noindent
-Findings
+The authors developed a prototype of Prox-RBAC to measure the performance of the cryptographic protocols and enforcement algorithms. The Prove construct uses the Feige-Fiat-Shamir identification protocol which uses a zero-knowledge proof. The Commit and Open primitives use Pedersen commitment. For authentication the authors use a salted hash of a password. The Hash, Enck, Encpk(c), and Signk primitives use SHA-256, AES-256, 1024-bit RSA, and SHA-1 with DSA in order. After 500 tests, the Pedersen commitment (37.9 ms) and RSA (35.9 ms) were the most expensive cryptographic operations while the rest with the exception of DSA signature (9.8 ms) required less than 1 ms to complete on average. 
 
 \subsubsection{Future Directions}
 
 \noindent
-Future Directions 
+Is there a better implementation of Feige-Fiat-Shamir and Pedersen that doesn’t use the BigInteger java library so said protocols can be used in different configurations? Can we use the results of this paper to construct a usable and efficient proximity-based RBAC system?
 
 \Urlmuskip=0mu plus 1mu\relax
+
 
 \noindent
 \subsection{Classifying RFID attacks and defenses}
