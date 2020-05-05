@@ -38,13 +38,8 @@
 \maketitle
 \selectlanguage{english}
 \begin{abstract}
-<<<<<<< HEAD
 Contactless authentication devices have existed in some capacity since the late 20th century. These devices allow users to authenticate themselves using something they have (smart card, proximity card, mobile device, etc) rather than something they know (passcode, combination, security question, etc) making the end-user less responsible for their authentication. This puts noticeably more pressure on the manufacturers to provide a product capable of providing confidentiality, integrity, and availability for its users. As such, the technology continues to advance as companies come up with newer, more advanced, ways to authenticate securely. In recent years, Lenel corporations has released multiple products under the BlueDiamond name that claim to "enhance freedom of movement in the workplace." /cite{lenelbluediamondwebsite} To date, these devices remain untested by the further research community for vulnerabilities that may lead to a breach of access control. As such, this paper aims to design an experimental process that future researchers may follow to accurately assess the security characteristics of Lenel's BlueDiamond contactless readers. This experiment will follow standard scientific procedure, using multiple tests to verify results and standard units of measurement to score success. Our analysis of these devices concludes that further testing on the subjects of Wiegand, RFID, Bluetooth, and the physical hardware may uncover significant findings.
 \end{abstract}
-=======
-
-\end{abstract} 
->>>>>>> ee596cc61107b81fa933d0b97d3cbb2a04073d3c
 
 \section*{Keywords}
 Lenel, BlueDiamond, Bluetooth, BLE, Bluetooth Low Energy, RFID, Wiegand, Reader
@@ -56,11 +51,11 @@ Words
 Words
 
 \section{Related Work}
-There has been much research done into attacking BLE devices. Several attacks stood out for their exploitation of vulnerabilities and under developed security features while developing an understanding of the Bluetooth security landscape. 
+There has been much research done into attacking BLE devices. Several attacks stood out for their exploitation of vulnerabilities and under developed security features while developing an understanding of the Bluetooth security landscape.
 
-Firstly, Generic Attribute Profile (GATT) attacks are a significant first step in attacking any Bluetooth device. By copying the GATT, a Bluetooth device can be mimic and fool applications into connecting to them. In Finding Vulnerabilities in IoT Devices: Ethical Hacking of Electronic Locks, Robberts and Toft utilize gattacker to examine Bluetooth advertisements and discover the services and characteristics of the lock. This information is then used to create a copy of the lock and conduct Man-in-the-Middle attacks and test authentication edge cases \cite{KTH}. 
+Firstly, Generic Attribute Profile (GATT) attacks are a significant first step in attacking any Bluetooth device. By copying the GATT, a Bluetooth device can be mimic and fool applications into connecting to them. In Finding Vulnerabilities in IoT Devices: Ethical Hacking of Electronic Locks, Robberts and Toft utilize gattacker to examine Bluetooth advertisements and discover the services and characteristics of the lock. This information is then used to create a copy of the lock and conduct Man-in-the-Middle attacks and test authentication edge cases \cite{KTH}.
 
-O'Sullivan builds on the vulnerabilities present in BLE communication protocol. He explains that the BD ADDR field could be fuzzed to determine the source of the communication and forge a connection to it \cite{osullivan}. Ryan notes that the underlying encryption protocol of BLE is fundamentally weak and allows for attackers to brute force the Temporary Key. That Temporary Key can be used to derive the Long Term Key and break the encryption of the protocol \cite{mryan13}. 
+O'Sullivan builds on the vulnerabilities present in BLE communication protocol. He explains that the BD ADDR field could be fuzzed to determine the source of the communication and forge a connection to it \cite{osullivan}. Ryan notes that the underlying encryption protocol of BLE is fundamentally weak and allows for attackers to brute force the Temporary Key. That Temporary Key can be used to derive the Long Term Key and break the encryption of the protocol \cite{mryan13}.
 
 Other protocols for IoT communications are not free of issues either. Chung shows the Wiegand is still vulnerable to a decade old attack in modern devices. An attacker can intercept and then duplicate the signals sent by a Wiegand device to the control server. This attack can capture and repeat and authorized card without needing to physically duplicate the card \cite{chung2017wiegand}. Hakamaki and Palomaki discuss a number of existing RFID attacks that still exist in modern RFID readers \cite{rfid15}.
 
@@ -73,41 +68,6 @@ Words?
 \subsection{Data Measurement \& Analysis}
 Words
 
-<<<<<<< HEAD
-Connected to the background and significance of your study is a section of your paper devoted to a more deliberate review and synthesis of prior studies related to the research problem under investigation. The purpose here is to place your project within the larger whole of what is currently being explored, while demonstrating to your readers that your work is original and innovative. Think about what questions other researchers have asked, what methods they have used, and what is your understanding of their findings and, when stated, their recommendations.
-
-Since a literature review is information dense, it is crucial that this section is intelligently structured to enable a reader to grasp the key arguments underpinning your proposed study in relation to that of other researchers. A good strategy is to break the literature into "conceptual categories" [themes] rather than systematically or chronologically describing groups of materials one at a time. Note that conceptual categories generally reveal themselves after you have read most of the pertinent literature on your topic so adding new categories is an on-going process of discovery as you review more studies. How do you know you've covered the key conceptual categories underlying the research literature? Generally, you can have confidence that all of the significant conceptual categories have been identified if you start to see repetition in the conclusions or recommendations that are being made.
-
-\textbf{NOTE:} Do not shy away from challenging the conclusions made in prior research as a basis for supporting the need for your paper. Assess what you believe is missing and state how previous research has failed to adequately examine the issue that your study addresses. For more information on writing literature reviews, go to: \url{https://libguides.usc.edu/writingguide/literaturereview}.
-
-To help frame your paper's review of prior research, consider the "five C’s" of writing a literature review:
-\begin{itemize}
-    \item Cite, so as to keep the primary focus on the literature pertinent to your research problem.
-    \item Compare the various arguments, theories, methodologies, and findings expressed in the literature: what do the authors agree on? Who applies similar approaches to analyzing the research problem?
-    \item Contrast the various arguments, themes, methodologies, approaches, and controversies expressed in the literature: describe what are the major areas of disagreement, controversy, or debate among scholars?
-    \item Critique the literature: Which arguments are more persuasive, and why? Which approaches, findings, and methodologies seem most reliable, valid, or appropriate, and why? Pay attention to the verbs you use to describe what an author says/does [e.g., asserts, demonstrates, argues, etc.].
-    \item Connect the literature to your own area of research and investigation: how does your own work draw upon, depart from, synthesize, or add a new perspective to what has been said in the literature?
-\end{itemize}
-
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=0.4\textwidth]{test.png}
-%  \caption{Notice how \LaTeX\ automatically numbers this figure.}
-%\end{figure}
-
-\section{Research Design \& Methods}
-This section must be well-written and logically organized because you are not actually doing the research, yet, your reader must have confidence that it is worth pursuing. The reader will never have a study outcome from which to evaluate whether your methodological choices were the correct ones. Thus, the objective here is to convince the reader that your overall research design and proposed methods of analysis will correctly address the problem and that the methods will provide the means to effectively interpret the potential results. Your design and methods should be unmistakably tied to the specific aims of your study.
-
-Describe the overall research design by building upon and drawing examples from your review of the literature. Consider not only methods that other researchers have used but methods of data gathering that have not been used but perhaps could be. Be specific about the methodological approaches you plan to undertake to obtain information, the techniques you would use to analyze the data, and the tests of external validity to which you commit yourself [i.e., the trustworthiness by which you can generalize from your study to other people, places, events, and/or periods of time].
-
-When describing the methods you will use, be sure to cover the following:
-\begin{itemize}
-    \item Specify the research process you will undertake and the way you will interpret the results obtained in relation to the research problem. Don't just describe what you intend to achieve from applying the methods you choose, but state how you will spend your time while applying these methods [e.g., coding text from interviews to find statements about the need to change school curriculum; running a regression to determine if there is a relationship between campaign advertising on social media sites and election outcomes in Europe].
-    \item Keep in mind that the methodology is not just a list of tasks; it is an argument as to why these tasks add up to the best way to investigate the research problem. This is an important point because the mere listing of tasks to be performed does not demonstrate that, collectively, they effectively address the research problem. Be sure you clearly explain this.
-    \item Anticipate and acknowledge any potential barriers and pitfalls in carrying out your research design and explain how you plan to address them. No method is perfect so you need to describe where you believe challenges may exist in obtaining data or accessing information. It's always better to acknowledge this than to have it brought up by your professor.
-    \end{itemize}
-=======
->>>>>>> ee596cc61107b81fa933d0b97d3cbb2a04073d3c
 \subsection{Procedures}
 Words
 
@@ -118,25 +78,6 @@ Words
 Words
 
 \section{Preliminary Suppositions \& Implications}
-<<<<<<< HEAD
-Just because you don't have to actually conduct the study and analyze the results, doesn't mean you can skip talking about the analytical process and potential implications. The purpose of this section is to argue how and in what ways you believe your research will refine, revise, or extend existing knowledge in the subject area under investigation. Depending on the aims and objectives of your study, describe how the anticipated results will impact future scholarly research, theory, practice, forms of interventions, or policymaking. Note that such discussions may have either substantive [a potential new policy], theoretical [a potential new understanding], or methodological [a potential new way of analyzing] significance.
-
-When thinking about the potential implications of your study, ask the following questions:
-\begin{itemize}
-    \item What might the results mean in regards to challenging the theoretical framework and underlying assumptions that support the study?
-    \item What suggestions for subsequent research could arise from the potential outcomes of the study?
-    \item What will the results mean to practitioners in the natural settings of their workplace?
-    \item Will the results influence programs, methods, and/or forms of intervention?
-    \item How might the results contribute to the solution of social, economic, or other types of problems?
-    \item Will the results influence policy decisions?
-    \item In what way do individuals or groups benefit should your study be pursued?
-    \item What will be improved or changed as a result of the proposed research?
-    \item How will the results of the study be implemented and what innovations or transformative insights could emerge from the process of implementation?
-\end{itemize}
-
-\textbf{NOTE:} This section should not delve into idle speculation, opinion, or be formulated on the basis of unclear evidence. The purpose is to reflect upon gaps or understudied areas of the current literature and describe how your proposed research contributes to a new understanding of the research problem should the study be implemented as designed.
-=======
->>>>>>> ee596cc61107b81fa933d0b97d3cbb2a04073d3c
 
 \subsection{Theoretical Implications}
 Words
