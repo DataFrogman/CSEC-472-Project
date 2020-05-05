@@ -57,20 +57,19 @@ This  section  should  describe  relevant  security  concepts  related  to  your
 \section{Related Work}
 There has been much research done into attacking BLE devices. Several attacks stood out for their exploitation of vulnerabilities and under developed security features while developing an understanding of the Bluetooth security landscape.
 
-Firstly, Generic Attribute Profile (GATT) attacks are a significant first step in attacking any Bluetooth device. By copying the GATT, a Bluetooth device can be mimic and fool applications into connecting to them. In Finding Vulnerabilities in IoT Devices: Ethical Hacking of Electronic Locks, Robberts and Toft utilize gattacker to examine Bluetooth advertisements and discover the services and characteristics of the lock. This information is then used to create a copy of the lock and conduct Man-in-the-Middle attacks and test authentication edge cases \cite{KTH}.
+Firstly, Generic Attribute Profile (GATT) attacks are a significant first step in attacking any Bluetooth device. By copying the GATT, an attacker can mimic a Bluetooth device and fool applications into connecting to them. In Finding Vulnerabilities in IoT Devices: Ethical Hacking of Electronic Locks, Robberts and Toft use gattacker to examine Bluetooth advertisements and discover the services and characteristics of the lock. This information is then used to create a copy of the lock and conduct Man-in-the-Middle attacks and test authentication edge cases \cite{KTH}.
 
-O'Sullivan builds on the vulnerabilities present in BLE communication protocol. He explains that the BD ADDR field could be fuzzed to determine the source of the communication and forge a connection to it \cite{osullivan}. Ryan notes that the underlying encryption protocol of BLE is fundamentally weak and allows for attackers to brute force the Temporary Key. That Temporary Key can be used to derive the Long Term Key and break the encryption of the protocol \cite{mryan13}.
+O'Sullivan builds on the vulnerabilities present in BLE communication protocol. He explains that the BD ADDR field could be fuzzed to determine the source of the communication and forge a connection to it \cite{osullivan}. Ryan notes that the underlying encryption protocol of BLE is fundamentally weak and allows for attackers to brute force the Temporary Key. An attacker can use that Temporary Key to derive the Long Term Key and break the encryption of the protocol \cite{mryan13}.
+
+It can be seen in the literature on BLE is very vulnerable to man-in-the-middle attacks, denial of service, packet sniffing, and other vulnerabilities. Even though higher levels of security are included in newer BLE versions, such as ECC or out-of-band key exchanges, security settings like PINs are still used by manufacturers \cite{8622000}\cite{jaihc19}\cite{mryan13}. A basic attack chain has emerged in the literature where the GATT is copied and an attack is launched to clear the device's Bluetooth pairings \cite{jaihc19}. The device is then tricked into pairing with the malicious device. The handshake is sniffed by the attacker allowing for encryption to be broken. 
 
 Other protocols for IoT communications are not free of issues either. Chung shows the Wiegand is still vulnerable to a decade old attack in modern devices. An attacker can intercept and then duplicate the signals sent by a Wiegand device to the control server. This attack can capture and repeat and authorized card without needing to physically duplicate the card \cite{chung2017wiegand}. Hakamaki and Palomaki discuss a number of existing RFID attacks that still exist in modern RFID readers \cite{rfid15}.
 
 \section{Research Design \& Methodology}
 Words
 
-\subsection{Definitions}
-Words?
-
 \subsection{Data Measurement \& Analysis}
-Words
+As this is primarily a penetration test of the Lenel BlueDiamond, there are four quantitative metrics of note: number of vulnerabilities, severity, likelihood, and risk. A vulnerability is counted if it could be exploited for an unintened effect. The severity, likelihood, and risk can be properly measured by the Common Vulnerability Scoring System, or CVSS 3.x. This would allow for a more uniform scoring standard inline with what the industry uses. Vulnerabilties will be discovered by a number of tools, including devices like the Ubertooth, manual tool usage, and fuzzing. Vulnerabilities found would be sorted based on protocol and CVSS score. This would allow for a clearer picture into the vulnerabilities for each protocol and the risk associated with using them. Once a vulnerability is discovered, an exploit would be attempted to practicality. Practicality is to measure the ease of attack. It is directly proportional to the likelihood, and provides further insight into likelihood than a CVSS score can. 
 
 \subsection{Procedures}
 Words
@@ -82,6 +81,7 @@ Words
 Words
 
 \section{Preliminary Suppositions \& Implications}
+Words
 
 \subsection{Theoretical Implications}
 Words
