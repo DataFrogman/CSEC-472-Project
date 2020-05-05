@@ -38,49 +38,42 @@
 \maketitle
 \selectlanguage{english}
 \begin{abstract}
+<<<<<<< HEAD
 Contactless authentication devices have existed in some capacity since the late 20th century. These devices allow users to authenticate themselves using something they have (smart card, proximity card, mobile device, etc) rather than something they know (passcode, combination, security question, etc) making the end-user less responsible for their authentication. This puts noticeably more pressure on the manufacturers to provide a product capable of providing confidentiality, integrity, and availability for its users. As such, the technology continues to advance as companies come up with newer, more advanced, ways to authenticate securely. In recent years, Lenel corporations has released multiple products under the BlueDiamond name that claim to "enhance freedom of movement in the workplace." /cite{lenelbluediamondwebsite} To date, these devices remain untested by the further research community for vulnerabilities that may lead to a breach of access control. As such, this paper aims to design an experimental process that future researchers may follow to accurately assess the security characteristics of Lenel's BlueDiamond contactless readers. This experiment will follow standard scientific procedure, using multiple tests to verify results and standard units of measurement to score success. Our analysis of these devices concludes that further testing on the subjects of Wiegand, RFID, Bluetooth, and the physical hardware may uncover significant findings.
 \end{abstract}
+=======
+
+\end{abstract} 
+>>>>>>> ee596cc61107b81fa933d0b97d3cbb2a04073d3c
 
 \section*{Keywords}
-Select keywords with care, because they will help users discover your paper. To determine appropriate keywords, put yourself in the position of someone who is trying to search for a paper like yours. What search terms would you use? From those terms, select a list of at least three and no more than five words. Include these words in the text of the abstract and if at all possible, in the title of the paper.
+Lenel, BlueDiamond, Bluetooth, BLE, Bluetooth Low Energy, RFID, Wiegand, Reader
 
 \section{Introduction}
-Before we get to the actual introduction, welcome to Overleaf, as well as \LaTeX\ itself! Although \LaTeX\ certainly has its quirks, we hope that by contrasting the template you see here with the compiled document on the right side, you can get an intuitive sense of how to work with it.
-
-Another thing before the introduction; here, I'm going attach a citation to this sentence \cite{latexcompanion}. Scroll on down to the bibliography section of the \LaTeX\ code if you'd like to see the other end of the built-in references system. The numbering is all handled in-house -- you just have to assign each reference a key, and Overleaf takes care of the rest.
-
-On with the actual introduction! The introduction should provide context and background information appropriate for an academic audience. It should state a focused research question, define the variables being studied, and make clear the objective, importance, and relevance of the work.
-
-Here is where you'd introduce the context surrounding your study. What led you to the question you ended up asking? Why is it relevant? Which fields of science is your question based around? What has previous literature demonstrated?
-
-While the structure of the previous parts of the introduction can be relatively variable, you must make sure to provide a brief overview of the study itself, and the methods you used to accomplish it. Obviously, excessive detail is not necessary (that's what the next section is for). Lastly, be sure to make mention of the potential implications of your findings, but once again remember that you'll be going into more detail about that in the discussion.
-
-\textbf{For your Auth Paper:} treat your introduction as the initial pitch of an idea or a thorough examination of the significance of a research problem. After reading the introduction, your readers should not only have an understanding of what you want to do, but they should also be able to gain a sense of your passion for the topic and to be excited about the study's possible outcomes.
-
-Think about your introduction as a narrative written in \textbf{two to four paragraphs} that succinctly answers the following four questions:
-\begin{enumerate}
-   \item What is the central research problem?
-   \item What is the topic of study related to that research problem?
-    \item What methods should be used to analyze the research problem?
-   \item Why is this important research, what is its significance, and why should someone reading the paper care about the outcomes of the proposed study?
-\end{enumerate}
+Words
 
 \section{Background \& Significance}
-This is where you explain the context of your paper and describe in detail why it's important. It can be melded into your introduction or you can create a separate section to help with the organization and narrative flow of your paper. Approach writing this section with the thought that you can’t assume your readers will know as much about the research problem as you do. Note that this section is not an essay going over everything you have learned about the topic; instead, you must choose what is most relevant in explaining the aims of your research.
-
-To that end, while there are no prescribed rules for establishing the significance of your proposed study, you should attempt to address some or all of the following:
-
-\begin{itemize}
-   \item State the research problem and give a more detailed explanation about the purpose of the study than what you stated in the introduction. This is particularly important if the problem is complex or multifaceted.
-    \item Present the rationale of your proposed study and clearly indicate why it is worth doing; be sure to answer the "So What? question [i.e., why should anyone care].
-    \item Describe the major issues or problems to be addressed by your research. This can be in the form of questions to be addressed. Be sure to note how your proposed study builds on previous assumptions about the research problem.
-    \item Explain the methods you plan to use for conducting your research. Clearly identify the key sources you intend to use and explain how they will contribute to your analysis of the topic.
-   \item Describe the boundaries of your proposed research in order to provide a clear focus. Where appropriate, state not only what you plan to study, but what aspects of the research problem will be excluded from the study.
-   \item If necessary, provide definitions of key concepts or terms.
-\end{itemize}
+Words
 
 \section{Related Work}
+There has been much research done into attacking BLE devices. Several attacks stood out for their exploitation of vulnerabilities and under developed security features while developing an understanding of the Bluetooth security landscape. 
 
+Firstly, Generic Attribute Profile (GATT) attacks are a significant first step in attacking any Bluetooth device. By copying the GATT, a Bluetooth device can be mimic and fool applications into connecting to them. In Finding Vulnerabilities in IoT Devices: Ethical Hacking of Electronic Locks, Robberts and Toft utilize gattacker to examine Bluetooth advertisements and discover the services and characteristics of the lock. This information is then used to create a copy of the lock and conduct Man-in-the-Middle attacks and test authentication edge cases \cite{KTH}. 
+
+O'Sullivan builds on the vulnerabilities present in BLE communication protocol. He explains that the BD ADDR field could be fuzzed to determine the source of the communication and forge a connection to it \cite{osullivan}. Ryan notes that the underlying encryption protocol of BLE is fundamentally weak and allows for attackers to brute force the Temporary Key. That Temporary Key can be used to derive the Long Term Key and break the encryption of the protocol \cite{mryan13}. 
+
+Other protocols for IoT communications are not free of issues either. Chung shows the Wiegand is still vulnerable to a decade old attack in modern devices. An attacker can intercept and then duplicate the signals sent by a Wiegand device to the control server. This attack can capture and repeat and authorized card without needing to physically duplicate the card \cite{chung2017wiegand}. Hakamaki and Palomaki discuss a number of existing RFID attacks that still exist in modern RFID readers \cite{rfid15}.
+
+\section{Research Design \& Methodology}
+Words
+
+\subsection{Definitions}
+Words?
+
+\subsection{Data Measurement \& Analysis}
+Words
+
+<<<<<<< HEAD
 Connected to the background and significance of your study is a section of your paper devoted to a more deliberate review and synthesis of prior studies related to the research problem under investigation. The purpose here is to place your project within the larger whole of what is currently being explored, while demonstrating to your readers that your work is original and innovative. Think about what questions other researchers have asked, what methods they have used, and what is your understanding of their findings and, when stated, their recommendations.
 
 Since a literature review is information dense, it is crucial that this section is intelligently structured to enable a reader to grasp the key arguments underpinning your proposed study in relation to that of other researchers. A good strategy is to break the literature into "conceptual categories" [themes] rather than systematically or chronologically describing groups of materials one at a time. Note that conceptual categories generally reveal themselves after you have read most of the pertinent literature on your topic so adding new categories is an on-going process of discovery as you review more studies. How do you know you've covered the key conceptual categories underlying the research literature? Generally, you can have confidence that all of the significant conceptual categories have been identified if you start to see repetition in the conclusions or recommendations that are being made.
@@ -113,11 +106,19 @@ When describing the methods you will use, be sure to cover the following:
     \item Keep in mind that the methodology is not just a list of tasks; it is an argument as to why these tasks add up to the best way to investigate the research problem. This is an important point because the mere listing of tasks to be performed does not demonstrate that, collectively, they effectively address the research problem. Be sure you clearly explain this.
     \item Anticipate and acknowledge any potential barriers and pitfalls in carrying out your research design and explain how you plan to address them. No method is perfect so you need to describe where you believe challenges may exist in obtaining data or accessing information. It's always better to acknowledge this than to have it brought up by your professor.
     \end{itemize}
+=======
+>>>>>>> ee596cc61107b81fa933d0b97d3cbb2a04073d3c
 \subsection{Procedures}
+Words
+
 \subsection{Timeline}
+Words
+
 \subsection{Novel Techniques}
+Words
 
 \section{Preliminary Suppositions \& Implications}
+<<<<<<< HEAD
 Just because you don't have to actually conduct the study and analyze the results, doesn't mean you can skip talking about the analytical process and potential implications. The purpose of this section is to argue how and in what ways you believe your research will refine, revise, or extend existing knowledge in the subject area under investigation. Depending on the aims and objectives of your study, describe how the anticipated results will impact future scholarly research, theory, practice, forms of interventions, or policymaking. Note that such discussions may have either substantive [a potential new policy], theoretical [a potential new understanding], or methodological [a potential new way of analyzing] significance.
 
 When thinking about the potential implications of your study, ask the following questions:
@@ -134,30 +135,26 @@ When thinking about the potential implications of your study, ask the following 
 \end{itemize}
 
 \textbf{NOTE:} This section should not delve into idle speculation, opinion, or be formulated on the basis of unclear evidence. The purpose is to reflect upon gaps or understudied areas of the current literature and describe how your proposed research contributes to a new understanding of the research problem should the study be implemented as designed.
+=======
+>>>>>>> ee596cc61107b81fa933d0b97d3cbb2a04073d3c
+
+\subsection{Theoretical Implications}
+Words
+
+\subsection{Practical Implications}
+Words
+
+\section{Expected Outcomes}
+Words
 
 \section{Conclusions}
-The conclusion reiterates the importance or significance of your paper and provides a brief summary of the entire study. This section should be only one or two paragraphs long, emphasizing why the research problem is worth investigating, why your research study is unique, and how it should advance existing knowledge.
-
-Someone reading this section should come away with an understanding of:
-\begin{itemize}
-    \item Why the study should be done,
-    \item The specific purpose of the study and the research questions it attempts to answer,
-    \item The decision to why the research design and methods used where chosen over other options,
-    \item The potential implications emerging from your proposed study of the research problem, and
-    \item A sense of how your study fits within the broader scholarship about the research problem.
-\end{itemize}
+Words
 
 \section{Acknowledgements}
-In the Acknowledgements section, the author(s) acknowledge or thank any persons or institutions who helped support the work in any way. In particular, this section must disclose any funding for the research completed, including the grant number (if a grant was awarded).
-
-Anyone to thank/credit for helping your team along the way? This is the place to do it.
-
-\section{Appendix}
-Appendices are optional sections that should include additional tables, figures, or other data beyond what is included in the results section. An appendix should be able to stand separately from the prinicpal article. Therefore, no references (callouts) to appendix figures or tables should be made in the principal article. If required, the appendix should have its own bibliographic reference list with citations to that list confined to the appendix. \cite{latexcompanion}
+We would like to thank Lenel for access to their BlueDiamond reader and their permission to conduct a test of the reader's security posture.
 
 \bibliographystyle{ieee}
 \bibliography{references}
 
-\bibentry{test}
 
 \end{document}
