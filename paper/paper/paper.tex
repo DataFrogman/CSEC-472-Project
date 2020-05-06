@@ -52,6 +52,14 @@ Lenel's BlueDiamond technology has been deployed in commercial, academic, and re
 The rest of the paper creates a foundation on which further research may be conducted. First we will discuss the background and significance of conducting this research in the first place. Second we will discuss related work in this sector that inspired our work on this project. Third we will discuss our research design and methodology behind the experiments we chose to recommend. Fourth we will discuss recommended data measurement and analysis techniques that we believe will yield the most impactful results. Fifth we will discuss preliminary procedure design, novel techniques, and expected timeline to be used in this experiment. Sixth, we will make some preliminary, theoretical, and practical implications to help guide the direction of the experiment. Finally, we will end with our expected outcomes as well as conclusions to be drawn from this experiment.
 
 \section{Background \& Significance}
+Throughout history, people have tried to gain access restricted areas. \cite{lockpickinghistory}  Locks were created in order to restrict access, but locksmiths were often skeptical of their inventions, and if they could be bypassed.  The first documented case of lock picking was a challenge released by Joseph Bramah, an Enlish locksmith.  Bramah had just developed his so called safety lock.  His lock had safety features that he believed to be completely secure.  Obviously, nothing is ever completely secure, but Bramah put it to the test by announcing a contest.  Anyone who could break into his new creation would net a cool sum of 20,000 pounds.  
+
+While the Bramah challenge was still in place, another locksmith caught wind of Bramah's idea.  Jeremiah Chubb built a lock that would alert an owner if any sort of picking had been detected.  He too, announced a challnge.  An American Locksmith named A.C. Hobbs took up the challenge, and had it open within an hour of touching the lock.  However, that wasn't the only challenge he accepted.  Chubb took a trip over to Hobbs' locksmithing shop, and 70 years later, picked the Bramah security lock.
+
+New technology leads to new innovation.  Almost overnight, businesses and organizations started using electronic locking systems for their ease of use and simplicity in granting or denying access.  Granting access to a building is as simple as a few button clicks.  For most organizations, it is much easier to spend the extra money for a digital system with computer-controlled access control than to re-key a lock every single time an employee leaves the organization.
+
+Lock Picking may be a thing of the past, but the security of electronic locks still need to be audited.  With most RFID-based systems, like those in locks, cloning cards is easier than ever due to new tools like the ProxMark RFID toolkit.\cite{7945583}  Even though the physical element of locks and lock picking may not stay the same with these newer electronic locking systems, the spirit stays alive in the hacking community.  These locks aren't invulnerable, and security professionals can certainly help bring them to the point where they can withstand basic attacks.
+
 
 \section{Related Work}
 There has been much research done into attacking BLE devices. Several attacks stood out for their exploitation of vulnerabilities and under developed security features while developing an understanding of the Bluetooth security landscape.
@@ -94,15 +102,21 @@ Existing attack chains against BLE will also be refined. We have seen these chai
 Finally, the security of the Lenel BlueDiamond will be affirmed. Our testing will allow for third party confirmation that these devices are secure against attacks. Lenel will benefit from outsider knowledge that is not present in institutional knowledge.
 
 \section{Expected Outcomes}
-Words
+Not every penetration test finds a massive zero day vulnerability.  However, that doesn't mean a test isn't completely useless.  Tests may not often discover massive issues, but smaller issues are often prevalent.  Issues such as weaker cryptography, issues with bad hardware intrusion detection, and bad endpoint security on older protocols are commonplace.  It should be expected to find several smaller issues rather than major flaws in the firmware or the device itself.
+
+Overall, we expect such a test to provide a concrete and detailed analysis on the Physical, Weigand, RFID, Bluetooth, and Networking stacks embedded in the device.  Such a test would outline how these protocols work on a device, and provide concrete analysis of potential vulnerabilities and weaknesses found in the implementation. 
 
 \section{Conclusions}
-Words
+Throughout this paper, we have discussed how to design a testing framework for attacking modern electronic locking technologies.  We listed out different types of attacks that could be run against a bluetooth-enabled locking solution.  Bluetooth attacks were discussed, along with RFID attacks, and the cryptographic attacks underneath both attack vectors.
+
+We also discussed attacking the device from the backend, from the protocols that allow for the lock to communicate securely with an authentication server.  This includes the Wiegand protocol, which is not designed with a security focus in mind.
+
+Lock picking may not yet be on the decline, but electronic locking mechanisms allow for greater viability for most organizations. Overall, electronic locking solutions will be used far into the future.  It's heavily important to test these locks to verify that the cryptographic and security mechanisms of these locks are structurally sound.
 
 \section{Acknowledgements}
 We would like to thank Lenel for access to their BlueDiamond reader and their permission to conduct a test of the reader's security posture.
 
-\bibliographystyle{ieee}
+\bibliographystyle{IEEEtran}
 \bibliography{references}
 
 
