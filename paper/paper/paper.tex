@@ -18,7 +18,7 @@
 \include{references.bib}
 
 \title{
-		\vspace{-1in} 	
+		\vspace{-1in}
 		\usefont{OT1}{bch}{b}{n}
 		\normalfont \normalsize \textsc{CSEC-472 Authentication Paper} \\ [14pt]
 		\huge A Security Analysis of the Lenel BlueDiamond \\
@@ -38,132 +38,86 @@
 \maketitle
 \selectlanguage{english}
 \begin{abstract}
-The abstract is in a sense the most important part of your paper, since many readers will scan an abstract first before deciding to invest effort in reading the paper.
-
-An abstract should be about 300 words long at most, and should act as a clear summary of the paper. It should state the aim and scope of the research, methods, results and conclusions, and the implications of the paper’s finding. The abstract should be broadly accessible (i.e. able to be understood by as many people as possible - even those outside the field) and communicate the importance of the work being done. 
-
-Structure the abstract as follows: background and aims, methods, results and conclusion. 
-
-Examples of some decent abstracts can be found \href{http://journal.stemfellowship.org/userimages/ContentEditor/1451371646443/AbstractExamples.pdf}{here}, with the main ideas highlighted.
-\end{abstract} 
+Contactless authentication devices have existed in some capacity since the late 20th century. These devices allow users to authenticate themselves using something they have (smart card, proximity card, mobile device, etc) rather than something they know (passcode, combination, security question, etc) making the end-user less responsible for their authentication. This puts noticeably more pressure on the manufacturers to provide a product capable of providing confidentiality, integrity, and availability for its users. As such, the technology continues to advance as companies come up with newer, more advanced, ways to authenticate securely. In recent years, Lenel corporations has released multiple products under the BlueDiamond name that claim to "enhance freedom of movement in the workplace." \cite{lenelbluediamondwebsite} To date, these devices remain untested by the further research community for vulnerabilities that may lead to a breach of access control. As such, this paper aims to design an experimental process that future researchers may follow to accurately assess the security characteristics of Lenel's BlueDiamond contactless readers. This experiment will follow standard scientific procedure, using multiple tests to verify results and standard units of measurement to score success. Our analysis of these devices concludes that further testing on the subjects of Wiegand, RFID, Bluetooth, and the physical hardware may uncover significant findings.
+\end{abstract}
 
 \section*{Keywords}
-Select keywords with care, because they will help users discover your paper. To determine appropriate keywords, put yourself in the position of someone who is trying to search for a paper like yours. What search terms would you use? From those terms, select a list of at least three and no more than five words. Include these words in the text of the abstract and if at all possible, in the title of the paper.
+Lenel, BlueDiamond, Bluetooth, BLE, Bluetooth Low Energy, RFID, Wiegand, Reader
 
 \section{Introduction}
-Before we get to the actual introduction, welcome to Overleaf, as well as \LaTeX\ itself! Although \LaTeX\ certainly has its quirks, we hope that by contrasting the template you see here with the compiled document on the right side, you can get an intuitive sense of how to work with it.
+Third-party academic research is crucial to ensuring access control devices receive appropriate field testing. Untested devices can spell trouble for multiple parties if zero-day vulnerabilities are exploited by unwanted individuals. In this case, a breach of access control could lead to unauthorized access to secure facilities and/or compromise of sensitive information. Causing potentially fatal damage to organizations without proper backups in place.
 
-Another thing before the introduction; here, I'm going attach a citation to this sentence \cite{latexcompanion}. Scroll on down to the bibliography section of the \LaTeX\ code if you'd like to see the other end of the built-in references system. The numbering is all handled in-house -- you just have to assign each reference a key, and Overleaf takes care of the rest.
+Lenel's BlueDiamond technology has been deployed in commercial, academic, and residential settings. Making it an ideal target for potential threat actors. Our research analyzes these readers from an attackers perspective in an attempt to identify flaws that may lead to unauthorized access. We believe this form of research will help improve the overall security posture of these devices as well as provide Lenel with helpful feedback on how their devices can be assessed by the public.
 
-On with the actual introduction! The introduction should provide context and background information appropriate for an academic audience. It should state a focused research question, define the variables being studied, and make clear the objective, importance, and relevance of the work.
-
-Here is where you'd introduce the context surrounding your study. What led you to the question you ended up asking? Why is it relevant? Which fields of science is your question based around? What has previous literature demonstrated?
-
-While the structure of the previous parts of the introduction can be relatively variable, you must make sure to provide a brief overview of the study itself, and the methods you used to accomplish it. Obviously, excessive detail is not necessary (that's what the next section is for). Lastly, be sure to make mention of the potential implications of your findings, but once again remember that you'll be going into more detail about that in the discussion.
-
-\textbf{For your Auth Paper:} treat your introduction as the initial pitch of an idea or a thorough examination of the significance of a research problem. After reading the introduction, your readers should not only have an understanding of what you want to do, but they should also be able to gain a sense of your passion for the topic and to be excited about the study's possible outcomes.
-
-Think about your introduction as a narrative written in \textbf{two to four paragraphs} that succinctly answers the following four questions:
-\begin{enumerate}
-   \item What is the central research problem?
-   \item What is the topic of study related to that research problem?
-    \item What methods should be used to analyze the research problem?
-   \item Why is this important research, what is its significance, and why should someone reading the paper care about the outcomes of the proposed study?
-\end{enumerate}
+The rest of the paper creates a foundation on which further research may be conducted. First we will discuss the background and significance of conducting this research in the first place. Second we will discuss related work in this sector that inspired our work on this project. Third we will discuss our research design and methodology behind the experiments we chose to recommend. Fourth we will discuss recommended data measurement and analysis techniques that we believe will yield the most impactful results. Fifth we will discuss preliminary procedure design, novel techniques, and expected timeline to be used in this experiment. Sixth, we will make some preliminary, theoretical, and practical implications to help guide the direction of the experiment. Finally, we will end with our expected outcomes as well as conclusions to be drawn from this experiment.
 
 \section{Background \& Significance}
-This is where you explain the context of your paper and describe in detail why it's important. It can be melded into your introduction or you can create a separate section to help with the organization and narrative flow of your paper. Approach writing this section with the thought that you can’t assume your readers will know as much about the research problem as you do. Note that this section is not an essay going over everything you have learned about the topic; instead, you must choose what is most relevant in explaining the aims of your research.
+Throughout history, people have tried to gain access restricted areas. \cite{lockpickinghistory}  Locks were created in order to restrict access, but locksmiths were often skeptical of their inventions, and if they could be bypassed.  The first documented case of lock picking was a challenge released by Joseph Bramah, an Enlish locksmith.  Bramah had just developed his so called safety lock.  His lock had safety features that he believed to be completely secure.  Obviously, nothing is ever completely secure, but Bramah put it to the test by announcing a contest.  Anyone who could break into his new creation would net a cool sum of 20,000 pounds.  
 
-To that end, while there are no prescribed rules for establishing the significance of your proposed study, you should attempt to address some or all of the following:
+While the Bramah challenge was still in place, another locksmith caught wind of Bramah's idea.  Jeremiah Chubb built a lock that would alert an owner if any sort of picking had been detected.  He too, announced a challnge.  An American Locksmith named A.C. Hobbs took up the challenge, and had it open within an hour of touching the lock.  However, that wasn't the only challenge he accepted.  Chubb took a trip over to Hobbs' locksmithing shop, and 70 years later, picked the Bramah security lock.
 
-\begin{itemize}
-   \item State the research problem and give a more detailed explanation about the purpose of the study than what you stated in the introduction. This is particularly important if the problem is complex or multifaceted.
-    \item Present the rationale of your proposed study and clearly indicate why it is worth doing; be sure to answer the "So What? question [i.e., why should anyone care].
-    \item Describe the major issues or problems to be addressed by your research. This can be in the form of questions to be addressed. Be sure to note how your proposed study builds on previous assumptions about the research problem.
-    \item Explain the methods you plan to use for conducting your research. Clearly identify the key sources you intend to use and explain how they will contribute to your analysis of the topic.
-   \item Describe the boundaries of your proposed research in order to provide a clear focus. Where appropriate, state not only what you plan to study, but what aspects of the research problem will be excluded from the study.
-   \item If necessary, provide definitions of key concepts or terms.
-\end{itemize}
+New technology leads to new innovation.  Almost overnight, businesses and organizations started using electronic locking systems for their ease of use and simplicity in granting or denying access.  Granting access to a building is as simple as a few button clicks.  For most organizations, it is much easier to spend the extra money for a digital system with computer-controlled access control than to re-key a lock every single time an employee leaves the organization.
+
+Lock Picking may be a thing of the past, but the security of electronic locks still need to be audited.  With most RFID-based systems, like those in locks, cloning cards is easier than ever due to new tools like the ProxMark RFID toolkit.\cite{7945583}  Even though the physical element of locks and lock picking may not stay the same with these newer electronic locking systems, the spirit stays alive in the hacking community.  These locks aren't invulnerable, and security professionals can certainly help bring them to the point where they can withstand basic attacks.
+
 
 \section{Related Work}
+There has been much research done into attacking BLE devices. Several attacks stood out for their exploitation of vulnerabilities and under developed security features while developing an understanding of the Bluetooth security landscape.
 
-Connected to the background and significance of your study is a section of your paper devoted to a more deliberate review and synthesis of prior studies related to the research problem under investigation. The purpose here is to place your project within the larger whole of what is currently being explored, while demonstrating to your readers that your work is original and innovative. Think about what questions other researchers have asked, what methods they have used, and what is your understanding of their findings and, when stated, their recommendations.
+Firstly, Generic Attribute Profile (GATT) attacks are a significant first step in attacking any Bluetooth device. By copying the GATT, an attacker can mimic a Bluetooth device and fool applications into connecting to them. In Finding Vulnerabilities in IoT Devices: Ethical Hacking of Electronic Locks, Robberts and Toft use gattacker to examine Bluetooth advertisements and discover the services and characteristics of the lock. This information is then used to create a copy of the lock and conduct Man-in-the-Middle attacks and test authentication edge cases \cite{KTH}.
 
-Since a literature review is information dense, it is crucial that this section is intelligently structured to enable a reader to grasp the key arguments underpinning your proposed study in relation to that of other researchers. A good strategy is to break the literature into "conceptual categories" [themes] rather than systematically or chronologically describing groups of materials one at a time. Note that conceptual categories generally reveal themselves after you have read most of the pertinent literature on your topic so adding new categories is an on-going process of discovery as you review more studies. How do you know you've covered the key conceptual categories underlying the research literature? Generally, you can have confidence that all of the significant conceptual categories have been identified if you start to see repetition in the conclusions or recommendations that are being made.
+O'Sullivan builds on the vulnerabilities present in BLE communication protocol. He explains that the BD ADDR field could be fuzzed to determine the source of the communication and forge a connection to it \cite{osullivan}. Ryan notes that the underlying encryption protocol of BLE is fundamentally weak and allows for attackers to brute force the Temporary Key. An attacker can use that Temporary Key to derive the Long Term Key and break the encryption of the protocol \cite{mryan13}.
 
-\textbf{NOTE:} Do not shy away from challenging the conclusions made in prior research as a basis for supporting the need for your paper. Assess what you believe is missing and state how previous research has failed to adequately examine the issue that your study addresses. For more information on writing literature reviews, go to: \url{https://libguides.usc.edu/writingguide/literaturereview}.
+It can be seen in the literature on BLE is very vulnerable to man-in-the-middle attacks, denial of service, packet sniffing, and other vulnerabilities. Even though higher levels of security are included in newer BLE versions, such as ECC or out-of-band key exchanges, security settings like PINs are still used by manufacturers \cite{8622000}\cite{jaihc19}\cite{mryan13}. A basic attack chain has emerged in the literature where the GATT is copied and an attack is launched to clear the device's Bluetooth pairings \cite{jaihc19}. The device is then tricked into pairing with the malicious device. The handshake is sniffed by the attacker allowing for encryption to be broken.
 
-To help frame your paper's review of prior research, consider the "five C’s" of writing a literature review:
-\begin{itemize}
-    \item Cite, so as to keep the primary focus on the literature pertinent to your research problem.
-    \item Compare the various arguments, theories, methodologies, and findings expressed in the literature: what do the authors agree on? Who applies similar approaches to analyzing the research problem?
-    \item Contrast the various arguments, themes, methodologies, approaches, and controversies expressed in the literature: describe what are the major areas of disagreement, controversy, or debate among scholars?
-    \item Critique the literature: Which arguments are more persuasive, and why? Which approaches, findings, and methodologies seem most reliable, valid, or appropriate, and why? Pay attention to the verbs you use to describe what an author says/does [e.g., asserts, demonstrates, argues, etc.].
-    \item Connect the literature to your own area of research and investigation: how does your own work draw upon, depart from, synthesize, or add a new perspective to what has been said in the literature?
-\end{itemize}
-    
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=0.4\textwidth]{test.png}
-%  \caption{Notice how \LaTeX\ automatically numbers this figure.}
-%\end{figure}
+Other protocols for IoT communications are not free of issues either. Chung shows the Wiegand is still vulnerable to a decade old attack in modern devices. An attacker can intercept and then duplicate the signals sent by a Wiegand device to the control server. This attack can capture and repeat and authorized card without needing to physically duplicate the card \cite{chung2017wiegand}. Hakamaki and Palomaki discuss a number of existing RFID attacks that still exist in modern RFID readers \cite{rfid15}.
 
-\section{Research Design \& Methods}
-This section must be well-written and logically organized because you are not actually doing the research, yet, your reader must have confidence that it is worth pursuing. The reader will never have a study outcome from which to evaluate whether your methodological choices were the correct ones. Thus, the objective here is to convince the reader that your overall research design and proposed methods of analysis will correctly address the problem and that the methods will provide the means to effectively interpret the potential results. Your design and methods should be unmistakably tied to the specific aims of your study.
+\section{Research Design \& Methodology}
+Our research seeks to analyze the security posture of the readers as they would appear in a customer environment. As such, our research design follows a quasi-experimental structure, meaning only pre-existing configurations of the reader will be studied. Setup of the reader for testing will require connecting the power and ground wires to a 12v power source and the D0, D1, and tamper wires to a raspberry pi. Interfacing with a raspberry pi allows researchers flexible access to perform multiple different tasks such as collecting data or changing configurations. Our proposed connection will allow for easy analysis of the Wiegand hardware within the device. Researchers may also choose to set up the BlueDiamond mobile app to allow the ability for testing bluetooth traffic sent and received by the device. The attack vector serves as a variable in this equation as its outcome can be scored against others using a common standard. Observations of consistency, difficulty, and threat level will allow us to score each attack vector using the Common Vulnerability Scoring System (CVSS) \cite{cvss}.
 
-Describe the overall research design by building upon and drawing examples from your review of the literature. Consider not only methods that other researchers have used but methods of data gathering that have not been used but perhaps could be. Be specific about the methodological approaches you plan to undertake to obtain information, the techniques you would use to analyze the data, and the tests of external validity to which you commit yourself [i.e., the trustworthiness by which you can generalize from your study to other people, places, events, and/or periods of time].
+\subsection{Data Measurement \& Analysis}
+As this is primarily a penetration test of the Lenel BlueDiamond, there are four quantitative metrics of note: number of vulnerabilities, severity, likelihood, and risk. A vulnerability is counted if it could be exploited for an unintened effect. The severity, likelihood, and risk can be properly measured by the Common Vulnerability Scoring System, or CVSS 3.x. This would allow for a more uniform scoring standard inline with what the industry uses. Vulnerabilties will be discovered by a number of tools, including devices like the Ubertooth, manual tool usage, and fuzzing. Vulnerabilities found would be sorted based on protocol and CVSS score. This would allow for a clearer picture into the vulnerabilities for each protocol and the risk associated with using them. Once a vulnerability is discovered, an exploit would be attempted to practicality. Practicality is to measure the ease of attack. It is directly proportional to the likelihood, and provides further insight into likelihood than a CVSS score can.
 
-When describing the methods you will use, be sure to cover the following:
-\begin{itemize}
-    \item Specify the research process you will undertake and the way you will interpret the results obtained in relation to the research problem. Don't just describe what you intend to achieve from applying the methods you choose, but state how you will spend your time while applying these methods [e.g., coding text from interviews to find statements about the need to change school curriculum; running a regression to determine if there is a relationship between campaign advertising on social media sites and election outcomes in Europe].
-    \item Keep in mind that the methodology is not just a list of tasks; it is an argument as to why these tasks add up to the best way to investigate the research problem. This is an important point because the mere listing of tasks to be performed does not demonstrate that, collectively, they effectively address the research problem. Be sure you clearly explain this.
-    \item Anticipate and acknowledge any potential barriers and pitfalls in carrying out your research design and explain how you plan to address them. No method is perfect so you need to describe where you believe challenges may exist in obtaining data or accessing information. It's always better to acknowledge this than to have it brought up by your professor.
-    \end{itemize}
 \subsection{Procedures}
+The testing performed against the readers would be broken into three primary categories: Bluetooth, RFID, and Wiegand.  These categories will follow logical attack chains to test a variety of vulnerabilites.
+
+The Bluetooth procedures follow a primary attack chain to test for vulnerabilities.  The chain starts with either gattacker \cite{GattackingJasek} \cite{BluetoothMITMTal} or CrackLE \cite{10.1145/3190645.3190693} to gain an initial foothold.  From there, the next step is to test for either injection attacks or injection free attacks \cite{jaihc19} to clear the binding list.  After the binding list is cleared a man-in-the-middle attack can be attempted \cite{lonzetta2018security} \cite{osullivan} \cite{BluetoothMITMTal}.  From this point there are multiple attacks that can be attempted.  The first attack is to attempt to break the long-term key by brute forcing the term key \cite{sevier2019securityofble} \cite{179196}.  After this replay attacks and active sniffing can be attempted \cite{filizzola2018security} \cite{osullivan}.  Finally, the protocol could be reverse engineered to try and find vulnerabilities in the implementation.
+
+The primary RFID attack is cloning, it is possible to try to prevent cloning though it is very hard \cite{7888545} \cite{dijkPortableBumping} \cite{mitrokotsa09} \cite{7945583}.  Secondly, the random number generator used for RFID cards can be tested for vulnerabilities \cite{6565237} \cite{mitrokotsa09}. A third possible set of attacks is to try passive and active relay against the reader \cite{hancke2009confidence} \cite{6810722}.  Another possibility is to examine the RFID card reader for possible injection attacks and remote code execution \cite{garciaIClass}.  The final attack method would be to attack the RFID chain of trust used in the reader \cite{lehtonen07}.
+
+The Wiegand protocol attacks are relatively simple.  The first step of the attack chain is to analyze the various Wiegand outputs of the reader.  After a large enough scans have been made interception and duplication attacks can be made \cite{chung2017wiegand}. Finally, a BLEKey \cite{baseggio2015BLEKey} or similar device can be made and tested against the reader.  As a part of the Wiegand testing, attacks against the optical tamper sensor will need to be created and tested.
+
+These three sets of attacks will cover a large amount of the reader's attack surface.  The particular kill chains are ordered to effectively build off of previous steps and to test the easier attacks before the more complicated ones.  The order also is set so that the possible dangerous attacks that could damage the device are run last.
+
 \subsection{Timeline}
-\subsection{Novel Techniques}
+The timeline for this project assumes a eight week period for testing.  This eight week period will be broken up into five separate stages for setup, testing, and wrapup.  Eight weeks should be more than adequate to perform the necessary testing and provide a complete report.  The first period is one week long and dedicated to setup.  During this time a test lab would be built with the necessary equipment to test RFID, Bluetooth, and Wiegand.  The second period is two weeks in length and dedicated to testing RFID.  The third period is also two weeks in length, this is dedicated to testing for Bluetooth weaknesses.  The fourth period is the final two week period, this time dedicated to testing for Wiegand vulnerabilities.  The fifth and final period is one week in length, unlike the others this period is not for testing.  The last period is dedicated to writing the report to submit to Carrier for their review.
 
 \section{Preliminary Suppositions \& Implications}
-Just because you don't have to actually conduct the study and analyze the results, doesn't mean you can skip talking about the analytical process and potential implications. The purpose of this section is to argue how and in what ways you believe your research will refine, revise, or extend existing knowledge in the subject area under investigation. Depending on the aims and objectives of your study, describe how the anticipated results will impact future scholarly research, theory, practice, forms of interventions, or policymaking. Note that such discussions may have either substantive [a potential new policy], theoretical [a potential new understanding], or methodological [a potential new way of analyzing] significance.
- 
-When thinking about the potential implications of your study, ask the following questions:
-\begin{itemize}
-    \item What might the results mean in regards to challenging the theoretical framework and underlying assumptions that support the study?
-    \item What suggestions for subsequent research could arise from the potential outcomes of the study?
-    \item What will the results mean to practitioners in the natural settings of their workplace?
-    \item Will the results influence programs, methods, and/or forms of intervention?
-    \item How might the results contribute to the solution of social, economic, or other types of problems?
-    \item Will the results influence policy decisions?
-    \item In what way do individuals or groups benefit should your study be pursued?
-    \item What will be improved or changed as a result of the proposed research?
-    \item How will the results of the study be implemented and what innovations or transformative insights could emerge from the process of implementation?
-\end{itemize}
+This reasearch will expand and refine on the current work available on Lenel readers and readers in general. While we could find several research papers on BLE lock examination \cite{matthewrs2017surveydoorlock}\cite{ho2016smart}\cite{ye2017security}\cite{8887393}, we found no research on readers that offer multiple protocols for communication. We have a opportunity to add insight on examining mutli-protocol readers and how to approached examining and attacking them. In addition, we could find very little on attack chains for RFID or Wiegand based attacks \cite{chung2017wiegand}. Our work will allow for the creating of a preliminary attack chain for these protocols.
 
-\textbf{NOTE:} This section should not delve into idle speculation, opinion, or be formulated on the basis of unclear evidence. The purpose is to reflect upon gaps or understudied areas of the current literature and describe how your proposed research contributes to a new understanding of the research problem should the study be implemented as designed.
+\subsection{Theoretical Implications}
+Existing attack chains against BLE will also be refined. We have seen these chains demonstrated \cite{lonzetta2018security}\cite{BluetoothMITMTal} already, but not laid out and explored beyond simply using the tools. These processes and procedures can be laid out and refined in this research allowing for a properly documented attack chain.
+
+\subsection{Practical Implications}
+Finally, the security of the Lenel BlueDiamond will be affirmed. Our testing will allow for third party confirmation that these devices are secure against attacks. Lenel will benefit from outsider knowledge that is not present in institutional knowledge.
+
+\section{Expected Outcomes}
+Not every penetration test finds a massive zero day vulnerability.  However, that doesn't mean a test isn't completely useless.  Tests may not often discover massive issues, but smaller issues are often prevalent.  Issues such as weaker cryptography, issues with bad hardware intrusion detection, and bad endpoint security on older protocols are commonplace.  It should be expected to find several smaller issues rather than major flaws in the firmware or the device itself.
+
+Overall, we expect such a test to provide a concrete and detailed analysis on the Physical, Weigand, RFID, Bluetooth, and Networking stacks embedded in the device.  Such a test would outline how these protocols work on a device, and provide concrete analysis of potential vulnerabilities and weaknesses found in the implementation. 
 
 \section{Conclusions}
-The conclusion reiterates the importance or significance of your paper and provides a brief summary of the entire study. This section should be only one or two paragraphs long, emphasizing why the research problem is worth investigating, why your research study is unique, and how it should advance existing knowledge.
+Throughout this paper, we have discussed how to design a testing framework for attacking modern electronic locking technologies.  We listed out different types of attacks that could be run against a bluetooth-enabled locking solution.  Bluetooth attacks were discussed, along with RFID attacks, and the cryptographic attacks underneath both attack vectors.
 
-Someone reading this section should come away with an understanding of:
-\begin{itemize}
-    \item Why the study should be done,
-    \item The specific purpose of the study and the research questions it attempts to answer,
-    \item The decision to why the research design and methods used where chosen over other options,
-    \item The potential implications emerging from your proposed study of the research problem, and
-    \item A sense of how your study fits within the broader scholarship about the research problem.
-\end{itemize}
+We also discussed attacking the device from the backend, from the protocols that allow for the lock to communicate securely with an authentication server.  This includes the Wiegand protocol, which is not designed with a security focus in mind.
+
+Lock picking may not yet be on the decline, but electronic locking mechanisms allow for greater viability for most organizations. Overall, electronic locking solutions will be used far into the future.  It's heavily important to test these locks to verify that the cryptographic and security mechanisms of these locks are structurally sound.
 
 \section{Acknowledgements}
-In the Acknowledgements section, the author(s) acknowledge or thank any persons or institutions who helped support the work in any way. In particular, this section must disclose any funding for the research completed, including the grant number (if a grant was awarded).
+We would like to thank Lenel for access to their BlueDiamond reader and their permission to conduct a test of the reader's security posture.
 
-Anyone to thank/credit for helping your team along the way? This is the place to do it.
-
-\section{Appendix}
-Appendices are optional sections that should include additional tables, figures, or other data beyond what is included in the results section. An appendix should be able to stand separately from the prinicpal article. Therefore, no references (callouts) to appendix figures or tables should be made in the principal article. If required, the appendix should have its own bibliographic reference list with citations to that list confined to the appendix. \cite{latexcompanion}
-
-\bibliographystyle{ieee}
+\bibliographystyle{IEEEtran}
 \bibliography{references}
 
-\bibentry{test}
 
 \end{document}
